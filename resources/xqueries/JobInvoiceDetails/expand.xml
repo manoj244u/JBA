@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+<expression><![CDATA[
+        import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy'; 
+      
+        import module namespace dynamicQueryModule 	= 'dynamicQueryModule' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/dynamicQueryModule.xqy';
+         declare variable $Invoice external;
+         declare variable $Date external;
+         declare variable $Currency external;
+            declare variable $CONO external;
+        
+   
+		 		for $elem in doc('/DATA/JBA/Collection/SSP45')/SSP45/SSP45-ROW[INVN45=$Invoice][CONO45=$CONO][CURN45=$Currency][RECT45='IN' or 'CR']
+   	return	 	        	
+		
+		
+			<results> 
+			{
+			    let $elem3 := doc('/DATA/JBA/Collection/SLP05')/SLP05/SLP05-ROW[CONO05=$elem/CONO45][CUSN05=$elem/ACNO45][DSEQ05=$elem/LOCN45]
+				let $elem1:= doc('/DATA/JBA/Collection/SSP46')/SSP46/SSP46-ROW[INVN46=$Invoice][CONO46=$CONO]
+				let $elem2:=doc('/DATA/JBA/Collection/SSP11')/SSP11/SSP11-ROW[CONO11=$CONO]
+				return
+	
+				 <result 
+				 
+				 
+				   
+				    TYPE='{$elem/INVT45}'
+				    JobNumber='{$elem/JOBN45}'				    
+                    Model ='{$elem1/INNO46}'
+                    SerialNo='{$elem1/INTY46}'
+                    Quantity ='{$elem/REPN45}'
+                    TechnicalReportNumber ='{$elem1/REPN46}'
+                    VisitDate = '{utility:dateFormatter($elem1/VSDT46)}'
+                    Rate ='{$elem1/RATE46}'
+                    VatValue ='{$elem1/LVAT46}'
+                    Vat_Rate ='{$elem1/VATR46}'
+                    LabourRate ='{$elem1/LHTY46}'
+                    LineValue='{$elem1/LVAL46}' 
+					Number='{$elem1/REPL46}'
+					Description='{$elem2/TLIN11}'
+                    VatCode='{$elem1/VATC46}' 
+                    typeOfJob='{concat($elem/INVT45,$elem/RECT45)}'
+				 	InvoiceNumber='{$elem/INVN45}'					
+				    CurrencyCode  ='{$elem/CURN45}'
+				    InvoiceDate='{utility:dateFormatter($elem/DTIN45)}'			    				    
+                    Account ='{$elem/ACNO45}'
+                    Location='{$elem/LOCN45}'
+                    CustomerOrderNumber='{$elem/ORDN45}'
+
+                    JobCategory ='{$elem1/JOBT46}'
+                     TotalValue ='{$elem1/(LVAL46 + LVAT46)}'
+                    DetailLine ='{$elem1/AFLT46}'
+
+                    SundryType ='{$elem/INVT45}'  
+                     SundryType1 ='{$elem/RECT45}'
+
+
+
+                    
+                  
+          title='JobInvoiceDetails'
+					type='JobInvoiceDetails' 
+                 
+					                     
+					 />				
+            } 
+			</results>
+        
+        
+    ]]></expression></xquery>

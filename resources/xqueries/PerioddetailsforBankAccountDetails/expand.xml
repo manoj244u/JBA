@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+<expression><![CDATA[
+        import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy'; 
+                import module namespace dynamicQueryModule 	= 'dynamicQueryModule' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/dynamicQueryModule.xqy';
+        
+         declare variable $Company external;
+         declare variable $BankAccount external;
+         declare variable $Period external;
+         
+        
+   
+		 	let $elem := doc('/DATA/JBA/Collection/CSP11')/CSP11/CSP11-ROW[CONO11=$Company][BANK11=$BankAccount]
+        	return	 	        	
+		
+		
+			<results> 
+			{
+			
+				for	$elem1 in doc('/DATA/JBA/Collection/CSP12')/CSP12/CSP12-ROW[CONO12=$elem/CONO11][BANK12=$elem/BANK11][PERD12=$Period]
+
+				return
+	
+				 <result 
+				 
+				 
+				     					
+		                                Company = '{$elem1/CONO12 }'
+		                                BankAccount = '{$elem1/BANK12 }'
+		                                AccountDescription = '{$elem/BDSC11 }'
+					                    Currency = '{$elem/CURN11}'
+					                    Period = '{$elem1/PERD12}'
+					                    OpeningBalanceinBankCurrency = '{$elem1/BLOP12}'
+					                 ClosingBalanceinBankCurrency = '{$elem1/(PYTM12 + RCTM12  + CGTM12 + BLOP12)}'
+					         
+					                    
+					             			                
+					                  
+					                    title='PerioddetailsforBankAccountDetails'
+							            type='PerioddetailsforBankAccountDetails'
+                 
+					                     
+					 />				
+            } 
+			</results>
+        
+        
+    ]]></expression></xquery>

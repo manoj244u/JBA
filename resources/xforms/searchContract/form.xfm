@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<xhtml:html xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<xhtml:head>
+		<xforms:model id="searchContractModel">
+			<xforms:instance>
+				<data>
+				 <company/>
+				  <branch/>
+				   <accountNumber/>
+					 <accountLocation/>
+			          <accountName/>
+			          <contractNumber/>
+			          <contractType/>
+			           <contractstartDate xsi:type="xforms:date"/>
+			     </data>
+			</xforms:instance>
+			<xforms:bind id="companyBind" nodeset="company" />
+			<xforms:bind id="branchBind" nodeset="branch" />
+			<xforms:bind id="accountNumberBind" nodeset="accountNumber" />
+			<xforms:bind id="accountLocationBind" nodeset="accountLocation" />
+			<xforms:bind id="accountNameBind" nodeset="accountName" />
+			<xforms:bind id="contractNumberBind" nodeset="contractNumber" />
+			<xforms:bind id="contractTypeBind" nodeset="contractType" />
+			<xforms:bind id="contractstartDateBind" nodeset="contractstartDate" />
+		       	       
+      <xforms:submission replace="none" id="searchContractModelSubmission" action="" method="post"/>
+      <xforms:reset ev:event="DOMActivate"/>
+		</xforms:model>
+	</xhtml:head>
+	<xhtml:body>
+		 <xforms:group model="searchContractModel" id="searchContract">
+      <table xmlns="http://www.w3.org/1999/xhtml">
+        <tr>
+		          <td rowspan="1" colspan="1">Company</td>
+		          <td>:</td>
+		          <td rowspan="1" colspan="1">
+		            <xforms:input id="Company" bind="companyBind">
+		              <xforms:label/>
+		            </xforms:input>
+                   </td>
+          
+			          <td rowspan="1" colspan="1">Branch</td>
+			          <td>:</td>
+			          <td rowspan="1" colspan="1">
+			            <xforms:input id="branch" bind="branchBind">
+			              <xforms:label/>
+			            </xforms:input>
+			          </td>
+         
+			          <td rowspan="1" colspan="1">AccountNumber</td>
+			          <td>:</td>
+			          <td rowspan="1" colspan="1">
+			            <xforms:input id="accountNumber" bind="accountNumberBind">
+			              <xforms:label/>
+			            </xforms:input>
+			          </td>
+                       
+			          <td rowspan="1" colspan="1">AccountLocation</td>
+			          <td>:</td>
+			          <td rowspan="1" colspan="1">
+			            <xforms:input id="accountLocation" bind="accountLocationBind">
+			              <xforms:label/>
+			            </xforms:input>
+			          </td>
+          </tr>
+          <tr>
+			           <td rowspan="1" colspan="1">AccountName</td>
+			          <td>:</td>
+			          <td rowspan="1" colspan="1">
+			            <xforms:input id="accountName" bind="accountNameBind">
+			              <xforms:label/>
+			            </xforms:input>
+			          </td>
+			           <td rowspan="1" colspan="1">ContractNumber</td>
+			          <td>:</td>
+			          <td rowspan="1" colspan="1">
+			            <xforms:input id="contractNumber" bind="contractNumberBind">
+			              <xforms:label/>
+			            </xforms:input>
+			          </td>
+			           <td rowspan="1" colspan="1">ContractType</td>
+			          <td>:</td>
+			          <td rowspan="1" colspan="1">
+			            <xforms:input id="contractType" bind="contractTypeBind">
+			              <xforms:label/>
+			            </xforms:input>
+			          </td>
+			           <td rowspan="1" colspan="1">ContractStartDate</td>
+			          <td>:</td>
+			          <td rowspan="1" colspan="1">
+			            <xforms:input id="contractstartDate" bind="contractstartDateBind">
+			              <xforms:label/>
+			            </xforms:input>
+			          </td>
+          </tr>
+      </table>
+			 <table xmlns="http://www.w3.org/1999/xhtml">
+        <tr>
+          <td rowspan="1" colspan="1">
+            <td rowspan="1" colspan="1">
+             <xforms:trigger id="input1-0">
+				<xforms:label>Submit</xforms:label>
+				<xforms:send submission="searchContractModelSubmission"/>
+				
+			</xforms:trigger>
+            </td>
+            <td rowspan="1" colspan="1">
+              <xforms:trigger>
+                <xforms:label>Clear</xforms:label>
+                <xforms:reset ev:event="DOMActivate"/>
+              </xforms:trigger>
+            </td>
+          </td>
+        </tr>
+      </table>
+		</xforms:group>
+	</xhtml:body>
+</xhtml:html>

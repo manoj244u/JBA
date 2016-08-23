@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+  <expression><![CDATA[
+    
+    
+       import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy';  
+        
+        declare variable $serialNumber external;
+        declare variable $companyCode external;
+        declare variable $job external;
+       
+       
+		  for $elem1 in  doc('/DATA/JBA/Collection/SSP54')/SSP54/SSP54-ROW[CONO54=$companyCode][JOBN54 = $job]
+		  
+return
+	<results>
+	{
+         let $elem := doc('/DATA/JBA/Collection/SSP55')/SSP55/SSP55-ROW[CONO55 = $companyCode][JOBN55 = $job]
+         let $elem2 := doc('/DATA/JBA/Collection/SSP57')/SSP57/SSP57-ROW[CONO57 =$companyCode][JOBN57 = $job]
+          let  $elem3 := doc('/DATA/JBA/Collection/SSP39')/SSP39/SSP39-ROW[CNNO39=$elem1/CONO55][CNTY39=$elem/CNTY55][CNDT39=$elem/CNDT55][INNO39=$elem/INNO55][INTY39=$elem/INTY39][SINT39=$elem/SINT55]
+	      let $T01 := if ($elem3/CVRY39 > 0 ) then doc('/DATA/JBA/Collection/SSP39')/SSP39/SSP39-ROW[CVRY39]
+             else if ($elem3/CVRY39 = '') then  '*NO' else ()
+           let  $elem4 := doc('/DATA/JBA/Collection/SSP22')/SSP22/SSP22-ROW[CNNO22=$elem1/CONO55][CNTY22=$elem/CNTY55][CNDT22=$elem/CNDT55][INNO22=$elem/INNO55][INTY22=$elem/INTY39][SINT22=$elem/SINT55]
+	       let  $elem5 := doc('/DATA/JBA/Collection/SSP12')/SSP12/SSP12-ROW[CONO12=$elem/CONO55][PRMT12='SECT'][PSAR12= '$elem/TYPM55' or '$elem2/CLMT57']
+		return
+			<result   
+				           companyCode = '{$elem/CONO55}'
+                             job = '{$elem/JOBN55}'
+                             modelNumber= '{$elem/INNO55}'
+                            serialNumber= '{$elem/INTY55}'
+                            jobCategory = '{$elem/JOBT55}'
+                            date='{utility:dateFormatter($elem/DTCT55)}'
+                            time = '{utility:genTime($elem/TMCT55)}'
+                            contractType='{$elem/CNTY55}'
+			 				configuration=''
+							covertype='{$T01/CVRY39}'
+							customer=''
+							callReceivedD='{utility:dateFormatter($elem/DTCT55)}'
+							callReceivedT='{utility:genTime($elem/TMCT55)}'
+							responsetime='{utility:genTime($elem/RSPH55)}'
+							targetDate ='{utility:dateFormatter($elem/TGDT55)}'
+							targetTime  ='{utility:genTime($elem/TGTM55)}'
+							machineLocation ='{$elem4/TLOC22}'
+							contact ='{$elem/CNTC55}'
+							fault  ='{$elem/FLTC55}'
+							faultDesc ='{$elem/FLT155}'
+							machineUp  ='{$elem/MUPF55}'
+							emergency ='{$elem/EMER55}'
+							complaint  ='{$elem/DESC12}'
+							orderNumber ='{$elem/ORDN55}'
+							appointmentDate  ='{utility:dateFormatter($elem/APDT55)}'
+							appointmentTime ='{utility:genTime($elem/APTM55)}'
+							estimatedDate ='{utility:dateFormatter($elem/DATE55)}'
+							estimatedTime ='{utility:genTime($elem/TIME55)}'
+							despatchedDate ='{utility:dateFormatter($elem/DTAL55)}'
+							despatchedTime  ='{utility:genTime($elem/TMAL55)}'
+							onSiteDate ='{utility:dateFormatter($elem/DTAR55)}'
+							onSiteTime ='{$elem/TMAR55}'
+							warrantyEquipment  =''
+							parts =''
+							telephone ='{$elem/DUPC55}'
+							team ='{$elem/TEAM55}'
+							teamDescription ='{$elem/DESC12}'
+							engineerNumber ='{$elem/ENUM55}'
+							engineerName =''
+							jobDuration ='{$elem/ELBH55}'
+							mServiceTemp ='{$elem/AUNO55}'
+							relatedJob ='{$elem/NM2555}'
+                            type='jobLineDetails'
+							title='JobLineDetail'
+
+/>
+}
+	</results>
+         
+    ]]></expression>
+</xquery>

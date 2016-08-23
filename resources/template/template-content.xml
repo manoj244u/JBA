@@ -1,0 +1,3617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../xsd/template-content.xsd">
+	<dataset>
+		<name>JBA</name>
+	</dataset>
+	<dataset>
+		<name>metadata</name>
+	</dataset>
+
+	<hierarchy>
+		<title>JBA</title>
+		<node>
+			<id>JBA</id>
+			<label>JBA</label>
+			<icon>allapplications16</icon>
+			<node>
+				<id>jobHistory</id>
+				<label>Job History</label>
+				<icon>businessobject16</icon>
+				<chainOfCustody>false</chainOfCustody>
+				<contentViewSettings>
+					<contentViewSetting refid="jobHistoryDetails" />
+					<contentViewSetting refid="jobLineDetails" />
+					<contentViewSetting refid="jobLine1Details" />
+					<contentViewSetting refid="jobLineDetail" />
+					<contentViewSetting refid="jobLineEquipment" />
+					<contentViewSetting refid="jobTextDetails" />
+					<contentViewSetting refid="equipEnquiry" />
+					<contentViewSetting refid="labourDetails" />
+					<contentViewSetting refid="internalDetails" />
+					<contentViewSetting refid="partsDetails" />
+					<contentViewSetting refid="costSDetails" />
+					<contentViewSetting refid="costDetails" />
+
+				</contentViewSettings>
+				<searchSettings>
+					<searchSetting name="Job Header" refid="searchJob" />
+					<searchSetting name="Job Line Selection" refid="searchJobLine" />
+					<searchSetting name="Test Equipment" refid="searchTestEquipment" />
+					<searchSetting name="Job Line Equipment" refid="searchJobEquipment" />
+					<searchSetting name="Labour Hours" refid="searchLabour" />
+					<searchSetting name="Parts Removed and Used" refid="searchParts" />
+					<searchSetting name="Misc and Cost" refid="searchCost" />
+					<searchSetting name="Internal Text" refid="searchText" />
+				</searchSettings>
+			</node>
+
+
+			<node>
+				<id>contractEnquiry</id>
+				<label>Contract Enquiry</label>
+				<icon>businessobject16</icon>
+				<chainOfCustody>false</chainOfCustody>
+				<contentViewSettings>
+					<contentViewSetting refid="jobContract" />
+					<contentViewSetting refid="mainContract" />
+					<contentViewSetting refid="contractEquipment" />
+					<contentViewSetting refid="schedVisit" />
+				</contentViewSettings>
+				<searchSettings>
+					<searchSetting name="List of Contracts for Selection"
+						refid="searchContractList" />
+					<searchSetting name="Contract Equipment" refid="searchContract" />
+					<searchSetting name="Sched Visit" refid="searchSchedVisit" />
+				</searchSettings>
+			</node>
+
+			<node>
+				<id>Finance_004</id>
+				<label>Finance_004</label>
+				<icon>businessobject16</icon>
+				<chainOfCustody>false</chainOfCustody>
+				<contentViewSettings>
+					<contentViewSetting refid="BankAccountEnquiryDetails" />
+					<contentViewSetting refid="PerioddetailsforBankAccountDetails" />
+					<contentViewSetting refid="CashPostingsforPeriodDetails" />
+					<contentViewSetting refid="ItemEnquiryDetails" />
+					<contentViewSetting refid="CustomerEnquiryDetails" />
+
+				</contentViewSettings>
+				<searchSettings>
+					<searchSetting name="Bank Account Enquiry" refid="BankAccountEnquiry" />
+					<searchSetting name="Period details forBank Account" refid="PerioddetailsforBankAccount" />
+					<searchSetting name="Cash Postings for Period" refid="CashPostingsforPeriod" />
+					<searchSetting name="Item Enquiry" refid="ItemEnquiry" />
+					<searchSetting name="GL Transaction Enquiry" refid="GLTransactionEnquiry" />
+					<searchSetting name="Customer Enquiry" refid="CustomerEnquiry" />
+				</searchSettings>
+			</node>
+
+			<node>
+				<id>Finance</id>
+				<label>Finance</label>
+				<icon>businessobject16</icon>
+				<chainOfCustody>false</chainOfCustody>
+				<contentViewSettings>
+					<contentViewSetting refid="FinanceEnquiryAllPeriods" />
+				</contentViewSettings>
+				<searchSettings>
+					<searchSetting name="AC Enquiry All Periods" refid="AcEnquiryAllperiods" />
+				</searchSettings>
+			</node>
+
+			<node>
+				<id>InvoiceEnquiry</id>
+				<label>InvoiceEnquiry</label>
+				<icon>businessobject16</icon>
+				<chainOfCustody>false</chainOfCustody>
+				<contentViewSettings>
+					<contentViewSetting refid="InvoiceEnquiryDetails" />
+					<contentViewSetting refid="JoborcontractDetails1" />
+
+
+					<contentViewSetting refid="Details" />
+					<contentViewSetting refid="ContractInvoiceDetails" />
+					<contentViewSetting refid="JobInvoiceDetails" />
+					<contentViewSetting refid="SundryInvoiceDetails" />
+					<contentViewSetting refid="SundryCreditDetails" />
+
+
+				</contentViewSettings>
+
+				<searchSettings>
+					<searchSetting name="Invoice Enquiry" refid="InvoiceEnquiry" />
+					<searchSetting name="Job / Contract" refid="jobcontract" />
+
+					<searchSetting name="Job Invoice" refid="JobInvoice" />
+					<searchSetting name="Contract Invoice" refid="ContractInvoice" />
+					<searchSetting name="Sundry Invoice" refid="SundryInvoice" />
+					<searchSetting name="Sundry Credit" refid="SundryCredit" />
+
+				</searchSettings>
+			</node>
+			<node>
+				<id>auditlog</id>
+				<label>Audit Logs</label>
+				<icon>businessobject16</icon>
+				<chainOfCustody>false</chainOfCustody>
+				<contentViewSettings>
+					<contentViewSetting refid="auditLogDetails" />
+				</contentViewSettings>
+				<searchSettings>
+					<searchSetting name="Audit Logs" refid="searchAuditLogs" />
+				</searchSettings>
+			</node>
+			<node>
+				<id>DataloadInquiry</id>
+				<label>Dataload Inquiry</label>
+				<icon>businessobject16</icon>
+				<chainOfCustody>false</chainOfCustody>
+				<contentViewSettings>
+					<contentViewSetting refid="dataLoadModule" />
+					<contentViewSetting refid="dataExtractModule" />
+				</contentViewSettings>
+				<searchSettings>
+					<searchSetting name="Data Extraction Inquiry" refid="dataExtractInquiry" />
+					<searchSetting name="Dataload Inquiry" refid="dataLoadInquiry" />
+				</searchSettings>
+			</node>
+		</node>
+	</hierarchy>
+
+	<transformationConfigurations>
+
+		<transformationConfiguration id="BankAccountEnquiryDetails">
+			<schemaIDs>BankAccountEnquiryDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/BankAccountEnquiryDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="PerioddetailsforBankAccountDetails">
+			<schemaIDs>PerioddetailsforBankAccountDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/PerioddetailsforBankAccountDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="CashPostingsforPeriodDetails">
+			<schemaIDs>CashPostingsforPeriodDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/CashPostingsforPeriodDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="ItemEnquiryDetails">
+			<schemaIDs>ItemEnquiryDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/ItemEnquiryDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="CustomerEnquiryDetails">
+			<schemaIDs>CustomerEnquiryDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/CustomerEnquiryDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+		<transformationConfiguration id="displayDefault">
+			<schemaIDs />
+			<styleURI>dds://DOMAIN=resource/xslt/xml-verbatim.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="InvoiceEnquiryDetails">
+			<schemaIDs>InvoiceEnquiryDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/InvoiceEnquiryDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+
+		<transformationConfiguration id="ContractInvoiceDetails">
+			<schemaIDs>ContractInvoiceDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/ContractInvoiceDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+		<transformationConfiguration id="JobInvoiceDetails">
+			<schemaIDs>JobInvoiceDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/JobInvoiceDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+		<transformationConfiguration id="SundryInvoiceDetails">
+			<schemaIDs>SundryInvoiceDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/SundryInvoiceDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+		<transformationConfiguration id="SundryCreditDetails">
+			<schemaIDs>SundryCreditDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/SundryCreditDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+		<transformationConfiguration id="Details">
+			<schemaIDs>Details</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/Details.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+
+
+		<transformationConfiguration id="InvCrdDetails">
+			<schemaIDs>InvCrdDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/InvCrdDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+		<transformationConfiguration id="JoborcontractDetails1">
+			<schemaIDs>JoborcontractDetails1</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/JoborcontractDetails1.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="displayURIDefault">
+			<schemaIDs />
+			<styleURI>dds://DOMAIN=resource/xslt/xml-verbatim.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/display.xpl</pipelineURI>
+			<xquery />
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="empty">
+			<schemaIDs>empty.xsd</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/empty.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/display.xpl</pipelineURI>
+			<xquery />
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="displayChainOfCustodyInfo">
+			<schemaIDs>chainofcustody.xsd</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/chainofcustody.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/display.xpl</pipelineURI>
+			<xquery />
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="noRecordDetails">
+			<schemaIDs>noRecordDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/blankScreen.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="jobHistoryDetails">
+			<schemaIDs>jobHistoryDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/jobHistoryDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="jobLineDetails">
+			<schemaIDs>jobLineDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/jobLineDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="jobLine1Details">
+			<schemaIDs>jobLine1Details</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/jobLine1Details.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+		<transformationConfiguration id="jobLineDetail">
+			<schemaIDs>jobLineDetail</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/jobLineDetail.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="FinanceEnquiryAllPeriods">
+			<schemaIDs>FinanceEnquiryAllPeriods</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/FinanceEnquiryAllPeriods.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="jobLineEquipment">
+			<schemaIDs>jobLineEquipment</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/jobLineEquipment.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="jobTextDetails">
+			<schemaIDs>jobTextDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/jobTextDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+		<transformationConfiguration id="internalDetails">
+			<schemaIDs>internalDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/internalDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="costSDetails">
+			<schemaIDs>costSDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/costSDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+		<transformationConfiguration id="labourDetails">
+			<schemaIDs>labourDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/labourDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="partsDetails">
+			<schemaIDs>partsDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/partsDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="costDetails">
+			<schemaIDs>costDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/costDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+		<transformationConfiguration id="equipEnquiry">
+			<schemaIDs>equipEnquiry</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/equipEnquiry.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+
+		<transformationConfiguration id="jobContract">
+			<schemaIDs>jobContract</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/jobContract.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+		<transformationConfiguration id="mainContract">
+			<schemaIDs>mainContract</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/mainContract.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="contractEquipment">
+			<schemaIDs>contractEquipment</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/contractEquipment.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="schedVisit">
+			<schemaIDs>schedVisit</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/schedVisit.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+
+
+
+		<!-- Audit Log -->
+		<transformationConfiguration id="auditLogDetails">
+			<schemaIDs>auditLogDetails</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/auditLogDetails.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<!-- Data Load -->
+		<transformationConfiguration id="dataLoadModule">
+			<schemaIDs>dataLoadModule</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/dataLoad/DataloadInquiry.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+		<transformationConfiguration id="dataExtractModule">
+			<schemaIDs>dataExtractModule</schemaIDs>
+			<styleURI>dds://DOMAIN=resource/xslt/dataLoad/DataExtractInquiry.xsl</styleURI>
+			<pipelineURI>dds://DOMAIN=resource/xproc/displayxqueryresult.xpl</pipelineURI>
+			<xquery>expand.xml</xquery>
+			<pdf>false</pdf>
+		</transformationConfiguration>
+	</transformationConfigurations>
+
+	<searchConfigurations>
+
+		<searchConfiguration id="jobcontract">
+			<xformName>jobcontract</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace jobcontract = 'jobcontract' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/jobcontract.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $Company := '(: Company :)'
+					let $Branch := '(: Branch :)'
+					let $Invoice := '(: Invoice :)'
+					
+								   		
+  					return 
+  					jobcontract:mainQuery($Company,$Branch,$Invoice,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>Company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Branch</name>
+						<label>Branch</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Invoice</name>
+						<label>Invoice</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>Invoice</name>
+					<label>Invoice / Credit</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Date1</name>
+					<label>Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>InvoiceValue</name>
+					<label>Invoice Value</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Account</name>
+					<label>Account</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Location</name>
+					<label>Location</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Currency</name>
+					<label>Currency</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>ACName</name>
+					<label>AC Name</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>ACAddressLine1</name>
+					<label>ACAddress Line1</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>ACAddressLine2</name>
+					<label>ACAddress Line2</label>
+				</searchResultItem>
+
+			</searchResultItems>
+			<nestedSearches>
+
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+
+		<searchConfiguration id="JobInvoice">
+			<xformName>JobInvoice</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace JobInvoice = 'JobInvoice' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/JobInvoice.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $Company := '(: Company :)'
+					let $Branch := '(: Branch :)'
+					let $Invoice := '(: Invoice :)'
+					
+								   		
+  					return 
+  					JobInvoice:mainQuery($Company,$Branch,$Invoice,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>Company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Branch</name>
+						<label>Branch</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Invoice</name>
+						<label>Invoice</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>Invoice</name>
+					<label>Invoice / Credit</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Date1</name>
+					<label>Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>InvoiceValue</name>
+					<label>Invoice Value</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Account</name>
+					<label>Account</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Location</name>
+					<label>Location</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Currency</name>
+					<label>Currency</label>
+				</searchResultItem>
+
+			</searchResultItems>
+			<nestedSearches>
+
+
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+		<searchConfiguration id="ContractInvoice">
+			<xformName>ContractInvoice</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace ContractInvoice = 'ContractInvoice' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/ContractInvoice.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $Company := '(: Company :)'
+					let $Branch := '(: Branch :)'
+					let $Invoice := '(: Invoice :)'
+					
+								   		
+  					return 
+  					ContractInvoice:mainQuery($Company,$Branch,$Invoice,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>Company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Branch</name>
+						<label>Branch</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Invoice</name>
+						<label>Invoice</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>Invoice</name>
+					<label>Invoice / Credit</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Date1</name>
+					<label>Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>InvoiceValue</name>
+					<label>Invoice Value</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Account</name>
+					<label>Account</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Location</name>
+					<label>Location</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Currency</name>
+					<label>Currency</label>
+				</searchResultItem>
+
+			</searchResultItems>
+			<nestedSearches>
+
+
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+		<searchConfiguration id="SundryInvoice">
+			<xformName>SundryInvoice</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace SundryInvoice = 'SundryInvoice' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/SundryInvoice.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $Company := '(: Company :)'
+					let $Branch := '(: Branch :)'
+					let $Invoice := '(: Invoice :)'
+					
+								   		
+  					return 
+  					SundryInvoice:mainQuery($Company,$Branch,$Invoice,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>Company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Branch</name>
+						<label>Branch</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Invoice</name>
+						<label>Invoice</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>Invoice</name>
+					<label>Invoice / Credit</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Date1</name>
+					<label>Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>InvoiceValue</name>
+					<label>Invoice Value</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Account</name>
+					<label>Account</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Location</name>
+					<label>Location</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Currency</name>
+					<label>Currency</label>
+				</searchResultItem>
+
+			</searchResultItems>
+			<nestedSearches>
+
+
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+		<!-- PerioddetailsforBankAccount -->
+
+		<searchConfiguration id="PerioddetailsforBankAccount">
+			<xformName>PerioddetailsforBankAccount</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace PerioddetailsforBankAccount = 'PerioddetailsforBankAccount' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/PerioddetailsforBankAccount.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $Company := '(: Company :)'
+					let $Account := '(: Account :)'
+					   		
+  					return 
+  					PerioddetailsforBankAccount:mainQuery($Company,$Account,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>Company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Account</name>
+						<label>Account</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>Company</name>
+					<label>Company</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>BankAccount</name>
+					<label>Bank Account</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>AccountDescription</name>
+					<label>Account Description</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Currency</name>
+					<label>Currency</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Period</name>
+					<label>Period</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>OpeningBalanceinBankCurrency</name>
+					<label>Opening Balance in Bank Currency</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>ClosingBalanceinBankCurrency</name>
+					<label>Closing Balance in Bank Currency</label>
+				</searchResultItem>
+
+			</searchResultItems>
+			<nestedSearches>
+			<nestedSearch>
+					<name>PerioddetailsforBankAccount</name>
+					<label>Perioddetails</label>
+					<description>Perioddetails</description>
+					<configurationId>CashPostingsforPeriod</configurationId>
+					<nodeId>Finance_004</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>Company</targetSearchFieldName>
+							<sourceResultItemName>Company</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>BankAccount</targetSearchFieldName>
+							<sourceResultItemName>BankAccount</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>Period</targetSearchFieldName>
+							<sourceResultItemName>Period</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+			
+
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+
+
+		<searchConfiguration id="BankAccountEnquiry">
+			<xformName>BankAccountEnquiry</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace BankAccountEnquiry = 'BankAccountEnquiry' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/BankAccountEnquiry.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $Company := '(: Company :)'
+					   		
+  					return 
+  					BankAccountEnquiry:mainQuery($Company,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>Company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>Company</name>
+					<label>Company</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>BankAccount</name>
+					<label>Bank Account</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>BankType</name>
+					<label>Bank Type</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>AccountDescription</name>
+					<label>Account Description</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Currency</name>
+					<label>Currency</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Balance</name>
+					<label>Balance</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Suspended</name>
+					<label>Suspended</label>
+				</searchResultItem>
+
+
+			</searchResultItems>
+			<nestedSearches>
+				<nestedSearch>
+					<name>BankAccountEnquiry</name>
+					<label>Bank Account Enquiry</label>
+					<description>BankAccountEnquiry</description>
+					<configurationId>PerioddetailsforBankAccount</configurationId>
+					<nodeId>Finance_004</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>Company</targetSearchFieldName>
+							<sourceResultItemName>Company</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>BankAccount</targetSearchFieldName>
+							<sourceResultItemName>BankAccount</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+		<searchConfiguration id="CashPostingsforPeriod">
+			<xformName>CashPostingsforPeriod</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace CashPostingsforPeriod = 'CashPostingsforPeriod' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/CashPostingsforPeriod.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $Company := '(: Company :)'
+					let $Account := '(: Account :)'
+					let $Period := '(: Period :)'				
+					let $ClosingBalance := '(: ClosingBalance :)'
+					   		
+  					return 
+  					CashPostingsforPeriod:mainQuery($Company,$Account,$Period,$ClosingBalance,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>Company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Account</name>
+						<label>Account</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Period</name>
+						<label>Period</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>ClosingBalance</name>
+						<label>Closing Balance</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>Company</name>
+					<label>Company</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>BankAccount</name>
+					<label>Bank Account</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Period</name>
+					<label>Period</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>AccountDescription</name>
+					<label>Account Description</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>ClosingBalanceinBankCurrency</name>
+					<label>Closing Balance in Bank Currency</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Suspended</name>
+					<label>Suspended</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Source</name>
+					<label>Source</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>MasterItemType</name>
+					<label>Master Item Type</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>CashBookReference</name>
+					<label>Cash Book Reference</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>BanksReference</name>
+					<label>Banks Reference</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Description</name>
+					<label>Description</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>BaseCurrencyValue</name>
+					<label>Base Currency Value</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>CurrencyValue</name>
+					<label>Currency Value</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>CurrencyCode</name>
+					<label>CurrencyCode</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>BankAccountCurrencyCode</name>
+					<label>Bank Account Currency Code</label>
+				</searchResultItem>
+
+
+			</searchResultItems>
+			<nestedSearches>
+			<nestedSearch>
+					<name>CashPostingsforPeriod</name>
+					<label>Cash Postings for Period</label>
+					<description>Cash Postings for Period</description>
+					<configurationId>ItemEnquiry</configurationId>
+					<nodeId>Finance_004</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>Company</targetSearchFieldName>
+							<sourceResultItemName>Company</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>CashBookReference</targetSearchFieldName>
+							<sourceResultItemName>CashBookReference</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+		<searchConfiguration id="ItemEnquiry">
+			<xformName>ItemEnquiry</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace ItemEnquiry = 'ItemEnquiry' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/ItemEnquiry.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $Company := '(: Company :)'
+					let $CashBookReference := '(: CashBookReference :)' 
+					   		
+  					return 
+  					ItemEnquiry:mainQuery($Company,$CashBookReference,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>Company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>CashBookReference</name>
+						<label>CashBook Reference</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+
+
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>Company</name>
+					<label>Company</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>CashBookReference</name>
+					<label>Cash Book Reference</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>BankAccount</name>
+					<label>Bank Account</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>MasterItemType</name>
+					<label>Master Item Type</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>BanksReference</name>
+					<label>BanksReference</label>
+				</searchResultItem>
+
+			</searchResultItems>
+			<nestedSearches>
+
+
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+		<searchConfiguration id="GLTransactionEnquiry">
+			<xformName>GLTransactionEnquiry</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace GLTransactionEnquiry = 'GLTransactionEnquiry' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/GLTransactionEnquiry.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $Company := '(: Company :)'
+					let $Session := '(: Session :)' 
+					   		
+  					return 
+  					GLTransactionEnquiry:mainQuery($Company,$Session,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>Company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Session</name>
+						<label>Session</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+
+
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>Company</name>
+					<label>Company</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>CashBookReference</name>
+					<label>Cash Book Reference</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>BankAccount</name>
+					<label>Bank Account</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>MasterItemType</name>
+					<label>Master Item Type</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>BanksReference</name>
+					<label>BanksReference</label>
+				</searchResultItem>
+
+			</searchResultItems>
+			<nestedSearches>
+
+
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+
+		<searchConfiguration id="CustomerEnquiry">
+			<xformName>CustomerEnquiry</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace CustomerEnquiry = 'CustomerEnquiry' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/CustomerEnquiry.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $Company := '(: Company :)'
+					let $Customer := '(: Customer :)' 
+					let $ItemType := '(: ItemType :)' 
+					let $ItemReference := '(: ItemReference :)' 
+					   		
+  					return 
+  					CustomerEnquiry:mainQuery($Company,$Customer,$ItemType,$ItemReference,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>Company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Customer</name>
+						<label>Customer</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>ItemType</name>
+						<label>ItemType</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>ItemReference</name>
+						<label>ItemReference</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+
+				</searchFieldRow>
+			</searchFields>
+			
+			<searchResultItems>
+				<searchResultItem>
+					<name>Customer</name>
+					<label>Customer</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>CustomerName</name>
+					<label>Customer Name</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>DateItemCreated</name>
+					<label>Date Item Created</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Type</name>
+					<label>Type</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Reference</name>
+					<label>Reference</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Session</name>
+					<label>Session</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>DocumentDate</name>
+					<label>Document Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Period</name>
+					<label>Period</label>
+				</searchResultItem>
+
+			</searchResultItems>
+			<nestedSearches>
+
+
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+
+		<searchConfiguration id="SundryCredit">
+			<xformName>SundryCredit</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace SundryCredit = 'SundryCredit' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/SundryCredit.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $Company := '(: Company :)'
+					let $Branch := '(: Branch :)'
+					let $Invoice := '(: Invoice :)'
+					
+								   		
+  					return 
+  					SundryCredit:mainQuery($Company,$Branch,$Invoice,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>Company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Branch</name>
+						<label>Branch</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>Invoice</name>
+						<label>Invoice</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>Invoice</name>
+					<label>Invoice / Credit</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Date1</name>
+					<label>Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>InvoiceValue</name>
+					<label>Invoice Value</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Account</name>
+					<label>Account</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Location</name>
+					<label>Location</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Currency</name>
+					<label>Currency</label>
+				</searchResultItem>
+
+			</searchResultItems>
+			<nestedSearches>
+
+
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+
+		<!-- InvoiceEnquiry -->
+		<searchConfiguration id="InvoiceEnquiry">
+			<xformName>InvoiceEnquiry</xformName>
+			<xquery>
+				<![CDATA[
+									
+				import module namespace InvoiceEnquiry = 'InvoiceEnquiry' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/InvoiceEnquiry.xqy';
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+										
+					let $Invoice := '(: Invoice :)'
+					let $CreditNumber := '(: CreditNumber :)'
+					let $StatementAccount := '(: StatementAccount :)'
+					let $SiteAccount := '(: SiteAccount :)'
+					let $Location := '(: Location :)'
+					let $Company :='(: Company :)'
+					
+					return 
+				InvoiceEnquiry:mainQuery($Invoice,$CreditNumber,$StatementAccount,$SiteAccount,$Location,$Company,$restrictions,$first,$last,$currentuser)
+					
+					
+                 ]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>Invoice</name>
+						<label>Invoice Number</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>CreditNumber</name>
+						<label>Credit Number</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>StatementAccount</name>
+						<label>Statement Account</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>SiteAccount</name>
+						<label>Site Account</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>Location</name>
+						<label>Location</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>Company</name>
+						<label>CompanyNo</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>Invoice</name>
+					<label>Invoice / Credit</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Date1</name>
+					<label>Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>InvoiceValue</name>
+					<label>Invoice Value</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Account</name>
+					<label>Account</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Location</name>
+					<label>Location</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Currency</name>
+					<label>Currency</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>Type</name>
+					<label>Type</label>
+				</searchResultItem>
+
+				<searchResultItem>
+					<name>InstallatonName</name>
+					<label>Installation Name</label>
+				</searchResultItem>
+
+			</searchResultItems>
+			<nestedSearches>
+				<nestedSearch>
+					<name>JbDetails</name>
+					<label>Jb Details</label>
+					<description>JobInvoiceDetails</description>
+					<configurationId>JobInvoice</configurationId>
+					<nodeId>InvoiceEnquiry</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>Company</targetSearchFieldName>
+							<sourceResultItemName>Company</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>Invoice</targetSearchFieldName>
+							<sourceResultItemName>Invoice</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+
+			</nestedSearches>
+			<nestedSearches>
+				<nestedSearch>
+					<name>ContractInvoice</name>
+					<label>Contract Invoice</label>
+					<description>Details</description>
+					<configurationId>ContractInvoice</configurationId>
+					<nodeId>InvoiceEnquiry</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>Company</targetSearchFieldName>
+							<sourceResultItemName>Company</sourceResultItemName>
+						</field>
+
+						<field>
+							<targetSearchFieldName>Invoice</targetSearchFieldName>
+							<sourceResultItemName>Invoice</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+
+			</nestedSearches>
+			<nestedSearches>
+				<nestedSearch>
+					<name>SundryInvoice</name>
+					<label>Sundry Invoice</label>
+					<description>Details</description>
+					<configurationId>SundryInvoice</configurationId>
+					<nodeId>InvoiceEnquiry</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>Company</targetSearchFieldName>
+							<sourceResultItemName>Company</sourceResultItemName>
+						</field>
+
+						<field>
+							<targetSearchFieldName>Invoice</targetSearchFieldName>
+							<sourceResultItemName>Invoice</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+
+			</nestedSearches>
+			<nestedSearches>
+				<nestedSearch>
+					<name>SundryCredit</name>
+					<label>Sundry Credit</label>
+					<description>Details</description>
+					<configurationId>SundryCredit</configurationId>
+					<nodeId>InvoiceEnquiry</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>Company</targetSearchFieldName>
+							<sourceResultItemName>Company</sourceResultItemName>
+						</field>
+
+						<field>
+							<targetSearchFieldName>Invoice</targetSearchFieldName>
+							<sourceResultItemName>Invoice</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+
+
+
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+
+		<searchConfiguration id="searchJob">
+			<xformName>SearchJob</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace searchJob = 'searchJob' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/searchJob.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $serialNumber := '(: serialNumber :)'
+					let $model := '(: model :)'
+					let $accountNumber := '(: accountNumber :)'
+					let $contractNumber := '(: contractNumber :)'
+					let $customerorderno := '(: customerorderno :)'
+					let $jobNumber := '(: jobNumber :)'
+					let $mservicetempjob := '(: mservicetempjob :)'
+					
+								   		
+  					return 
+  						searchJob:mainQuery($serialNumber,$model,$accountNumber,$contractNumber,$customerorderno,$jobNumber,$mservicetempjob,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>serialNumber</name>
+						<label>SerialNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>model</name>
+						<label>Model</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>accountNumber</name>
+						<label>AccountNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+				<searchFieldRow>
+					<searchField>
+						<name>contractNumber</name>
+						<label>ContractNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>customerorderno</name>
+						<label>CustomerOrderNo</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>jobNumber</name>
+						<label>JobNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>mservicetempjob</name>
+						<label>mService Temp Job</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>companyCode</name>
+					<label>CompanyCode</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>branch</name>
+					<label>Branch</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>job</name>
+					<label>Job</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>contractdate</name>
+					<label>ContractDate</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>modelNumber</name>
+					<label>ModelNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>serialNumber</name>
+					<label>SerialNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>jobCategory</name>
+					<label>JobCategory</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>fault</name>
+					<label>Fault</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>date</name>
+					<label>Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>time</name>
+					<label>Time</label>
+				</searchResultItem>
+			</searchResultItems>
+			<nestedSearches>
+				<nestedSearch>
+					<name>jobHistoryDetails</name>
+					<label>JobLineSelection</label>
+					<description>JobLineSelectionDetails</description>
+					<configurationId>searchJobLine</configurationId>
+					<nodeId>jobHistory</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>companyCode</targetSearchFieldName>
+							<sourceResultItemName>companyCode</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>job</targetSearchFieldName>
+							<sourceResultItemName>job</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+			</nestedSearches>
+			<crpWidth>750</crpWidth>
+		</searchConfiguration>
+
+		<searchConfiguration id="searchJobLine">
+			<xformName>SearchJobLine</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace searchJobLine = 'searchJobLine' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/searchJobLine.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $companyCode := '(: companyCode :)'
+					let $branch := '(: branch :)'
+					let $job := '(: job :)'
+					let $contractDate := '(: contractDate :)'
+								   		
+  					return 
+  						searchJobLine:mainQuery($companyCode,$branch,$job,$contractDate,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>companyCode</name>
+						<label>CompanyCode</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>branch</name>
+						<label>branch</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>job</name>
+						<label>Job</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>contractDate</name>
+						<label>ContractDate</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>companyCode</name>
+					<label>CompanyCode</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>job</name>
+					<label>Job</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>modelNumber</name>
+					<label>ModelNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>modelDescp</name>
+					<label>ModelDescription</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>serialNumber</name>
+					<label>SerialNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>jobCategory</name>
+					<label>JobCategory</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>engineer</name>
+					<label>Engineer</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>fault</name>
+					<label>Fault</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>faultDescription</name>
+					<label>FaultDescription</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>date</name>
+					<label>Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>time</name>
+					<label>Time</label>
+				</searchResultItem>
+			</searchResultItems>
+			<nestedSearches>
+				<nestedSearch>
+					<name>jobLine1Details</name>
+					<label>JobLineDetails</label>
+					<description>JobLineDetails</description>
+					<configurationId>dummy</configurationId>
+					<transformationConfiguration>jobLine1Details
+					</transformationConfiguration>
+				</nestedSearch>
+				<nestedSearch>
+					<name>jobTextDetails</name>
+					<label>JobTextDetails</label>
+					<description>JobTextDetails</description>
+					<configurationId>dummy</configurationId>
+					<transformationConfiguration>jobTextDetails
+					</transformationConfiguration>
+				</nestedSearch>
+				<nestedSearch>
+					<name>equipEnquiry</name>
+					<label>Test Equipment</label>
+					<description>Test Equipment Details</description>
+					<configurationId>searchTestEquipment</configurationId>
+					<nodeId>jobHistory</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>companyCode</targetSearchFieldName>
+							<sourceResultItemName>companyCode</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>job</targetSearchFieldName>
+							<sourceResultItemName>job</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>branch</targetSearchFieldName>
+							<sourceResultItemName>branch</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+			</nestedSearches>
+			<crpWidth>600</crpWidth>
+		</searchConfiguration>
+		<searchConfiguration id="searchJobLineDetail">
+			<xformName>SearchJobLineDetail</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace searchJobLine = 'searchJobLine' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/searchJobLineDetail.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $companyCode := '(: companyCode :)'
+					let $branch := '(: branch :)'
+					let $job := '(: job :)'
+					let $contractDate := '(: contractDate :)'
+								   		
+  					return 
+  						searchJobLine:mainQuery($companyCode,$branch,$job,$contractDate,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>companyCode</name>
+						<label>CompanyCode</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>branch</name>
+						<label>branch</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>job</name>
+						<label>Job</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>contractDate</name>
+						<label>ContractDate</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>companyCode</name>
+					<label>CompanyCode</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>job</name>
+					<label>Job</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>modelNumber</name>
+					<label>ModelNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>serialNumber</name>
+					<label>SerialNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>coverType</name>
+					<label>CoverType</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>customer</name>
+					<label>Customer</label>
+				</searchResultItem>
+
+				<searchResultItem>
+					<name>jobCategory</name>
+					<label>JobCategory</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>date</name>
+					<label>Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>time</name>
+					<label>Time</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>fault</name>
+					<label>Fault</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>faultDescription</name>
+					<label>FaultDescription</label>
+				</searchResultItem>
+			</searchResultItems>
+			<nestedSearches />
+
+
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+		<searchConfiguration id="searchJobEquipment">
+			<xformName>SearchJobLineEquipment</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace searchJobEquipment = 'searchJobEquipment' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/searchJobEquipment.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $model := '(: model :)'
+					let $serialNumber := '(: serialNumber :)'
+					let $account := '(: account :)'
+					let $location := '(: location :)'
+					let $generatedserialnumber := '(: generatedserialnumber :)'
+					let $companyCode := '(: companyCode :)'
+					let $branch := '(: branch :)'
+					
+								   		
+  					return 
+  						searchJobEquipment:mainQuery($model,$serialNumber,$account,$location,$generatedserialnumber,$companyCode,$branch,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>model</name>
+						<label>Model</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>serialNumber</name>
+						<label>SerialNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>account</name>
+						<label>Account</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+				<searchFieldRow>
+					<searchField>
+						<name>location</name>
+						<label>location</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>generatedserialnumber</name>
+						<label>Generated Serial Number</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>companyCode</name>
+						<label>CompanyCode</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>branch</name>
+						<label>Branch</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>companyCode</name>
+					<label>CompanyCode</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>site</name>
+					<label>Site</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>siteLocation</name>
+					<label>Location</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>address</name>
+					<label>A/C No/Adr</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>ownerAccount</name>
+					<label>Owner Account</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>ownerAddressCode</name>
+					<label>Owner Address Code</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>model</name>
+					<label>Model</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>modelDescription</name>
+					<label>ModelDescription</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>serialNumber</name>
+					<label>SerialNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>customerAssetNumber</name>
+					<label>CustomerAssetNumber</label>
+				</searchResultItem>
+			</searchResultItems>
+			<nestedSearches>
+				<nestedSearch>
+					<name>labourDetails</name>
+					<label>JobLabourDetails</label>
+					<description>JobLabourDetails</description>
+					<configurationId>searchLabour</configurationId>
+					<nodeId>jobHistory</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>companyCode</targetSearchFieldName>
+							<sourceResultItemName>companyCode</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>model</targetSearchFieldName>
+							<sourceResultItemName>model</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>serialNumber</targetSearchFieldName>
+							<sourceResultItemName>serialNumber</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+		<searchConfiguration id="searchTestEquipment">
+			<xformName>SearchTest</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace searchequipEnquiry = 'searchequipEnquiry' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/searchequipEnquiry.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $companyCode := '(: companyCode :)'
+					let $branch := '(: branch :)'
+					let $job := '(: job :)'
+					let $model := '(: model :)'
+					let $serialNumber := '(: serialNumber :)'
+								   		
+  					return 
+  						searchequipEnquiry:mainQuery($companyCode,$branch,$job,$model,$serialNumber,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>companyCode</name>
+						<label>CompanyCode</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>branch</name>
+						<label>branch</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>job</name>
+						<label>Job</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>model</name>
+						<label>Model</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>serialNumber</name>
+						<label>serialNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>companyCode</name>
+					<label>CompanyCode</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>branch</name>
+					<label>Branch</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>job</name>
+					<label>Job</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>date</name>
+					<label>date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>time</name>
+					<label>time</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>account</name>
+					<label>Account</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>location</name>
+					<label>Location</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>equipSerialNumber</name>
+					<label>EquipSerialNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>calibrationDate</name>
+					<label>Calibration Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>description</name>
+					<label>Description</label>
+				</searchResultItem>
+			</searchResultItems>
+			<nestedSearches>
+				<nestedSearch>
+					<name>jobLineEquipment</name>
+					<label>jobLineEquipment</label>
+					<description>JobLineEquipment</description>
+					<configurationId>searchJobEquipment</configurationId>
+					<nodeId>jobHistory</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>companyCode</targetSearchFieldName>
+							<sourceResultItemName>companyCode</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>model</targetSearchFieldName>
+							<sourceResultItemName>model</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>serialNumber</targetSearchFieldName>
+							<sourceResultItemName>serialNumber</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+		<searchConfiguration id="searchLabour">
+			<xformName>SearchLabour</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace searchLabour = 'searchLabour' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/searchLabour.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $model := '(: model :)'
+					let $serialNumber := '(: serialNumber :)'
+					let $account := '(: account :)'
+					let $company := '(: company :)'
+					let $location := '(: location :)'
+					let $generatedserialNumber := '(: generatedserialNumber :)'
+					let $contractNumber := '(: contractNumber :)'
+					let $contractType := '(: contractType :)'
+					let $jobNumber := '(: jobNumber :)'
+					let $branch := '(: branch :)'
+					
+					
+					
+					
+								   		
+  					return 
+  						searchLabour:mainQuery($model,$serialNumber,$account,$company,$location,$generatedserialNumber,$contractNumber,$contractType,$jobNumber,$branch,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>model</name>
+						<label>Model</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>serialNumber</name>
+						<label>SerialNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>account</name>
+						<label>Account</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+				<searchFieldRow>
+					<searchField>
+						<name>location</name>
+						<label>Location</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>generatedserialNumber</name>
+						<label>GeneratedSerialNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>contractNumber</name>
+						<label>ContractNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>contractType</name>
+						<label>ContractType</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>jobNumber</name>
+						<label>JobNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>branch</name>
+						<label>Branch</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>companyCode</name>
+					<label>CompanyCode</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>model</name>
+					<label>Model</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>jobNumber</name>
+					<label>jobNumber</label>
+				</searchResultItem>
+
+				<searchResultItem>
+					<name>serialNumber</name>
+					<label>SerialNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>contractNumber</name>
+					<label>ContractNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>contractType</name>
+					<label>ContractType</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>visitdate</name>
+					<label>VisitDate</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>jobcategory</name>
+					<label>JobCategory</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>report</name>
+					<label>Report</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>date</name>
+					<label>Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>chg</name>
+					<label>CHG</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>correctiveAction</name>
+					<label>Corrective Action</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>mileage</name>
+					<label>Mileage</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>hoursType</name>
+					<label>Hours Type</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>recordedFault</name>
+					<label>Recorded Fault</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>engineerNumber</name>
+					<label>EngineerNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>hours</name>
+					<label>Hours</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>faultDescription</name>
+					<label>FaultDescription</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>section</name>
+					<label>Section</label>
+				</searchResultItem>
+
+			</searchResultItems>
+
+			<nestedSearches>
+				<nestedSearch>
+					<name>partsDetails</name>
+					<label>PartsDetails</label>
+					<description>PartsDetails</description>
+					<configurationId>searchParts</configurationId>
+					<nodeId>jobHistory</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>companyCode</targetSearchFieldName>
+							<sourceResultItemName>companyCode</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>model</targetSearchFieldName>
+							<sourceResultItemName>model</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>serialNumber</targetSearchFieldName>
+							<sourceResultItemName>serialNumber</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+		<searchConfiguration id="searchParts">
+			<xformName>SearchParts</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace searchParts = 'searchParts' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/searchParts.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $model := '(: model :)'
+					let $serialNumber := '(: serialNumber :)'
+					let $account := '(: account :)'
+					let $company := '(: company :)'
+					let $location := '(: location :)'
+					let $generatedserialNumber := '(: generatedserialNumber :)'
+					let $contractNumber := '(: contractNumber :)'
+					let $contractType := '(: contractType :)'
+					let $jobNumber := '(: jobNumber :)'
+					let $branch := '(: branch :)'
+					
+					
+					
+					
+								   		
+  					return 
+  						searchParts:mainQuery($model,$serialNumber,$account,$company,$location,$generatedserialNumber,$contractNumber,$contractType,$jobNumber,$branch,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>model</name>
+						<label>Model</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>serialNumber</name>
+						<label>SerialNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>account</name>
+						<label>Account</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+				<searchFieldRow>
+					<searchField>
+						<name>location</name>
+						<label>Location</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>generatedserialNumber</name>
+						<label>GeneratedSerialNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>contractNumber</name>
+						<label>ContractNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>contractType</name>
+						<label>ContractType</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>jobNumber</name>
+						<label>JobNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>branch</name>
+						<label>Branch</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>companyCode</name>
+					<label>CompanyCode</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>job</name>
+					<label>Job</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>modelNumber</name>
+					<label>Model</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>serialNumber</name>
+					<label>SerialNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>contractNumber</name>
+					<label>ContractNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>contractType</name>
+					<label>ContractType</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>visitdate</name>
+					<label>VisitDate</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>part</name>
+					<label>Part</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>partDescription</name>
+					<label>PartDescription</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>jobcategory</name>
+					<label>JobCategory</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>quantity</name>
+					<label>Quantity</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>chg</name>
+					<label>CHG</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>engineerNumber</name>
+					<label>EngineerNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>supplier</name>
+					<label>Supplier</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>reason</name>
+					<label>Reason</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>reportNumber</name>
+					<label>ReportNumber</label>
+				</searchResultItem>
+
+			</searchResultItems>
+
+			<nestedSearches>
+				<nestedSearch>
+					<name>costDetails</name>
+					<label>CostDetails</label>
+					<description>CostDetails</description>
+					<configurationId>searchCost</configurationId>
+					<nodeId>jobHistory</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>companyCode</targetSearchFieldName>
+							<sourceResultItemName>companyCode</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>model</targetSearchFieldName>
+							<sourceResultItemName>model</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>serialNumber</targetSearchFieldName>
+							<sourceResultItemName>serialNumber</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+			</nestedSearches>
+
+
+
+
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+		<searchConfiguration id="searchCost">
+			<xformName>SearchCost</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace searchCost = 'searchCost' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/searchCost.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $model := '(: model :)'
+					let $serialNumber := '(: serialNumber :)'
+					let $account := '(: account :)'
+					let $company := '(: company :)'
+					let $location := '(: location :)'
+					let $generatedserialNumber := '(: generatedserialNumber :)'
+					let $contractNumber := '(: contractNumber :)'
+					let $contractType := '(: contractType :)'
+					let $jobNumber := '(: jobNumber :)'
+					let $branch := '(: branch :)'
+					
+					
+					
+					
+								   		
+  					return 
+  						searchCost:mainQuery($model,$serialNumber,$account,$company,$location,$generatedserialNumber,$contractNumber,$contractType,$jobNumber,$branch,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>model</name>
+						<label>Model</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>serialNumber</name>
+						<label>SerialNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>account</name>
+						<label>Account</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+				<searchFieldRow>
+					<searchField>
+						<name>location</name>
+						<label>Location</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>generatedserialNumber</name>
+						<label>GeneratedSerialNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>contractNumber</name>
+						<label>ContractNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>contractType</name>
+						<label>ContractType</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>jobNumber</name>
+						<label>JobNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>branch</name>
+						<label>Branch</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>companyCode</name>
+					<label>CompanyCode</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>job</name>
+					<label>Job</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>modelNumber</name>
+					<label>Model</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>serialNumber</name>
+					<label>SerialNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>contractNumber</name>
+					<label>ContractNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>contractType</name>
+					<label>ContractType</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>visitdate</name>
+					<label>VisitDate</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>chargeType</name>
+					<label>ChargeType</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>modifiedText</name>
+					<label>ModifiedText</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>standardText</name>
+					<label>StandardText</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>jobType</name>
+					<label>JobType</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>jobDesc</name>
+					<label>JobTypeDescription</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>engineerNumber</name>
+					<label>EngineerNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>mount</name>
+					<label>Amount</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>vat</name>
+					<label>VAT</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>rep</name>
+					<label>Rep</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>uplift</name>
+					<label>Uplift</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>act.</name>
+					<label>ACT.</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>chg</name>
+					<label>ACT</label>
+				</searchResultItem>
+
+			</searchResultItems>
+
+			<nestedSearches>
+				<nestedSearch>
+					<name>internalDetails</name>
+					<label>InternalDetails</label>
+					<description>InternalDetails</description>
+					<configurationId>searchText</configurationId>
+					<nodeId>jobHistory</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>companyCode</targetSearchFieldName>
+							<sourceResultItemName>companyCode</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>model</targetSearchFieldName>
+							<sourceResultItemName>model</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>serialNumber</targetSearchFieldName>
+							<sourceResultItemName>serialNumber</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+			</nestedSearches>
+
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+
+		<searchConfiguration id="searchText">
+			<xformName>SearchText</xformName>
+			<xquery>
+				<![CDATA[
+					import module namespace searchInternal = 'searchInternal' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/searchInternal.xqy';
+					
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $job := '(: job :)'
+					let $model := '(: model :)'
+					let $serialNumber := '(: serialNumber :)'
+					let $generatedserialNumber := '(: generatedserialNumber :)'
+								   		
+  					return 
+  						searchInternal:mainQuery($job,$model,$serialNumber,$generatedserialNumber,$restrictions,$first,$last,$currentuser)
+  						
+					]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>job</name>
+						<label>Job</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>model</name>
+						<label>Model</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>serialNumber</name>
+						<label>SerialNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>generatedserialNumber</name>
+						<label>GeneratedSerialNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>companyCode</name>
+					<label>CompanyCode</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>job</name>
+					<label>Job</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>serialNumber</name>
+					<label>SerialNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>modelNumber</name>
+					<label>ModelNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>branch</name>
+					<label>branch</label>
+				</searchResultItem>
+
+			</searchResultItems>
+			<nestedSearches />
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+		<!-- Job Contract -->
+		<searchConfiguration id="searchContractList">
+			<xformName>searchContractList</xformName>
+			<xquery>
+				<![CDATA[         
+        			import module namespace searchContractList = 'searchContractList' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/searchContractList.xqy';
+	              	
+	              	declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $contractNumber := '(: contractNumber :)'
+					let $contractType := '(: contractType :)'
+					let $accountNumber := '(: accountNumber :)'
+					let $accountAddress := '(: accountAddress :)'
+					
+					return
+					searchContractList:mainQuery($contractNumber,$contractType,$accountNumber,$accountAddress,$restrictions,$first,$last,$currentuser)
+     ]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>contractNumber</name>
+						<label>ContractNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>accountNumber</name>
+						<label>accountNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+				</searchFieldRow>
+				<searchFieldRow>
+					<searchField>
+						<name>contractType</name>
+						<label>ContractType</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>accountAddress</name>
+						<label>AccountAddress</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>company</name>
+					<label>Company</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>contract</name>
+					<label>Contract</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>contractType</name>
+					<label>ContractType</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>description</name>
+					<label>ContractTypeDescription</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>contractStartDate</name>
+					<label>ContractStartDate</label>
+				</searchResultItem>
+
+			</searchResultItems>
+			<nestedSearches>
+				<nestedSearch>
+					<name>mainContract</name>
+					<label>MainContract</label>
+					<description>MainContract Details</description>
+					<configurationId>dummy</configurationId>
+					<transformationConfiguration>mainContract
+					</transformationConfiguration>
+				</nestedSearch>
+
+				<nestedSearch>
+					<name>contractEquipment</name>
+					<label>contractEquipment</label>
+					<description>contractEquipment Details</description>
+					<configurationId>searchContract</configurationId>
+					<nodeId>contractEnquiry</nodeId>
+					<fields>
+						<field>
+							<targetSearchFieldName>company</targetSearchFieldName>
+							<sourceResultItemName>company</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>contractNumber</targetSearchFieldName>
+							<sourceResultItemName>contract</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>contractType</targetSearchFieldName>
+							<sourceResultItemName>contractType</sourceResultItemName>
+						</field>
+						<field>
+							<targetSearchFieldName>contractStartDate</targetSearchFieldName>
+							<sourceResultItemName>contractStartDate</sourceResultItemName>
+						</field>
+					</fields>
+				</nestedSearch>
+			</nestedSearches>
+			<operations />
+			<crpWidth>600</crpWidth>
+		</searchConfiguration>
+
+
+		<searchConfiguration id="searchContract">
+			<xformName>searchContract</xformName>
+			<xquery>
+				<![CDATA[         
+        			import module namespace searchContract = 'searchContract' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/searchContract.xqy';
+	              	
+	              	declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $company := '(: company :)'
+					let $branch := '(: branch :)'
+					let $accountNumber := '(: accountNumber :)'
+					let $accountLocation := '(: accountLocation :)'
+					let $accountName := '(: accountName :)'
+					let $contractNumber := '(: contractNumber :)'
+					let $contractType := '(: contractType :)'
+					let $contractStartDate := '(: contractStartDate :)'
+					
+					return
+					searchContract:mainQuery($company,$branch,$accountNumber,$accountLocation,$accountName,$contractNumber,$contractType,$contractStartDate,$restrictions,$first,$last,$currentuser)
+     ]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>branch</name>
+						<label>Branch</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>accountNumber</name>
+						<label>AccountNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>accountLocation</name>
+						<label>AccountLocation</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+				</searchFieldRow>
+				<searchFieldRow>
+					<searchField>
+						<name>accountName</name>
+						<label>AccountName</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>contractNumber</name>
+						<label>ContractNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>contractType</name>
+						<label>ContractType</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>contractstartDate</name>
+						<label>ContractStartDate</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>accountNumber</name>
+					<label>AccountNumber</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>installationAddress</name>
+					<label>InstallationAddress</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>location</name>
+					<label>Location</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>model</name>
+					<label>Model</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>serial</name>
+					<label>Serial</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>status</name>
+					<label>Status</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>incDate</name>
+					<label>Inc Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>removaldate</name>
+					<label>RemovalDate</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>rhours</name>
+					<label>R Hours</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>visit</name>
+					<label>Visit</label>
+				</searchResultItem>
+			</searchResultItems>
+			<nestedSearches />
+			<operations />
+			<crpWidth>600</crpWidth>
+		</searchConfiguration>
+
+		<searchConfiguration id="searchSchedVisit">
+			<xformName>searchSchedVisit</xformName>
+			<xquery>
+				<![CDATA[         
+        			import module namespace searchSchedVisit = 'searchSchedVisit' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/searchSchedVisit.xqy';
+	              	
+	              	declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $company := '(: company :)'
+					let $branch := '(: branch :)'
+					let $contractNumber := '(: contractNumber :)'
+					let $contractType := '(: contractType :)'
+					let $contractStartDate := '(: contractStartDate :)'
+					let $model := '(: model :)'
+					let $serialNumber := '(: serialNumber :)'
+					let $generatedSerialNumber := '(: generatedSerialNumber :)'
+					
+					return
+					searchSchedVisit:mainQuery($company,$branch,$contractNumber,$contractType,$contractStartDate,$model,$serialNumber,$generatedSerialNumber,$restrictions,$first,$last,$currentuser)
+     ]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>company</name>
+						<label>Company</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>branch</name>
+						<label>Branch</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>contractNumber</name>
+						<label>ContractNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>contractType</name>
+						<label>ContractType</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+				</searchFieldRow>
+				<searchFieldRow>
+					<searchField>
+						<name>contractstartDate</name>
+						<label>ContractStartDate</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>model</name>
+						<label>Model</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>serialNumber</name>
+						<label>SerialNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>generatedSerialNumber</name>
+						<label>GeneratedSerialNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>company</name>
+					<label>Company</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>period</name>
+					<label>Period</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>numberofVisits</name>
+					<label>NumberofVisits</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>jobCategory</name>
+					<label>Job Category</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>description</name>
+					<label>Description</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>hours</name>
+					<label>Hours</label>
+				</searchResultItem>
+
+
+			</searchResultItems>
+			<nestedSearches />
+			<operations />
+			<crpWidth>600</crpWidth>
+		</searchConfiguration>
+
+		<!-- Audit Logs -->
+
+		<searchConfiguration id="searchAuditLogs">
+			<xformName>SearchAuditLogs</xformName>
+			<xquery>
+				<![CDATA[
+	                import module namespace auditlog = 'auditlog' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/auditlog.xqy';
+	                declare variable $restrictions as xs:string external;
+	                declare variable $first as xs:string external;
+	                declare variable $last as xs:string external;
+	                declare variable $currentuser as xs:string external;
+	                
+	                let $userId 		:= '(: userId :)'
+	                let $fromDate 		:= '(: fromDate :)'
+	                let $toDate 		:= '(: toDate :)'
+	                let $filterAudits 	:= '(: filterAudits :)'
+	                return
+	                	auditlog:getAuditLogSearchResults($userId,$fromDate,$toDate,$filterAudits,$restrictions,$first,$last,$currentuser)
+                ]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>userId</name>
+						<label>User ID</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>true</fullText>
+					</searchField>
+					<searchField>
+						<name>fromDate</name>
+						<label>From Date</label>
+						<type>date</type>
+						<flexiblecode>%ARG%</flexiblecode>
+					</searchField>
+					<searchField>
+						<name>toDate</name>
+						<label>To Date</label>
+						<type>date</type>
+						<flexiblecode>%ARG%</flexiblecode>
+					</searchField>
+					<searchField>
+						<name>filterAudits</name>
+						<label>Filter Audit Lookups</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<options type="select">
+							<option>
+								<name>all</name>
+								<label>All</label>
+							</option>
+							<option>
+								<name>archive</name>
+								<label>Archive</label>
+							</option>
+							<option>
+								<name>login</name>
+								<label>Login</label>
+							</option>
+							<option>
+								<name>audit</name>
+								<label>Audit</label>
+							</option>
+						</options>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>user</name>
+					<label>User</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>searchConfiguration</name>
+					<label>Search Configuration</label>
+				</searchResultItem>
+				<searchResultItem>
+					<label>Time</label>
+					<name>eventTime</name>
+				</searchResultItem>
+			</searchResultItems>
+			<nestedSearches>
+			</nestedSearches>
+			<crpWidth>800</crpWidth>
+		</searchConfiguration>
+
+		<searchConfiguration id="AcEnquiryAllperiods">
+			<xformName>FinanceInquirySearch</xformName>
+			<xquery>
+				<![CDATA[         
+        			import module namespace Finance = 'Finance' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/finance.xqy';
+	              	
+	              	declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+					
+					let $company := '(: company :)'
+					let $ledger := '(: ledger :)'
+					let $account := '(: account :)'
+					
+					return
+					Finance:mainQuery($company,$ledger,$account,$restrictions,$first,$last,$currentuser)
+     ]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>company</name>
+						<label>CompanyNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>ledger</name>
+						<label>LedgerNumber</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>account</name>
+						<label>PostingPeriod</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>company</name>
+					<label>Company Number</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>ledger</name>
+					<label>Ledger Number</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>account</name>
+					<label>Account Number</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>period</name>
+					<label>Period</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>netpostedforperiod</name>
+					<label>Net Posted For Period</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>fiscalyeartodate</name>
+					<label>Fiscal Year to Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>calenderyeartodate</name>
+					<label>Calender Year to Date</label>
+				</searchResultItem>
+			</searchResultItems>
+			<operations />
+			<crpWidth>600</crpWidth>
+		</searchConfiguration>
+
+
+
+
+
+		<!-- Data Load -->
+		<searchConfiguration id="dataLoadInquiry">
+			<xformName>DataLoadForm</xformName>
+			<xquery>
+				<![CDATA[ 
+					import module namespace searchLoad = 'searchLoad' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/searchLoad.xqy';
+
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+
+					let $tableName 	:= '(: tableName :)'
+					let $fromDate	:= '(: fromDate :)'
+					let $toDate 	:= '(: toDate :)'
+					return
+						searchLoad:start($tableName,$fromDate,$toDate,$restrictions,$first,$last,$currentuser)
+				]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>tableName</name>
+						<label>Table Name</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>fromDate</name>
+						<label>From Date</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>toDate</name>
+						<label>To Date</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>table</name>
+					<label>Table</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>date</name>
+					<label>Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>count</name>
+					<label>Count</label>
+				</searchResultItem>
+			</searchResultItems>
+			<nestedSearches>
+				<nestedSearch>
+					<name>Load Details</name>
+					<label>Load Details</label>
+					<description>Load Details</description>
+					<configurationId>dummy</configurationId>
+					<transformationConfiguration>dataLoadModule
+					</transformationConfiguration>
+				</nestedSearch>
+			</nestedSearches>
+		</searchConfiguration>
+
+		<searchConfiguration id="dataExtractInquiry">
+			<xformName>DataExtractForm</xformName>
+			<xquery>
+				<![CDATA[ 
+					import module namespace searchExtract = 'searchExtract' at '/APPLICATIONS/JBA/resources/xqueries/templateContentSearches/searchExtract.xqy';
+
+					declare variable $restrictions as xs:string external;
+					declare variable $first as xs:string external;
+					declare variable $last as xs:string external;
+					declare variable $currentuser as xs:string external;
+
+					let $tableName 	:= '(: tableName :)'
+					let $fromDate	:= '(: fromDate :)'
+					let $toDate 	:= '(: toDate :)'
+					return
+						searchExtract:start($tableName,$fromDate,$toDate,$restrictions,$first,$last,$currentuser)
+				]]>
+			</xquery>
+			<searchFields>
+				<searchFieldRow>
+					<searchField>
+						<name>tableName</name>
+						<label>Table Name</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>fromDate</name>
+						<label>From Date</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+					<searchField>
+						<name>toDate</name>
+						<label>To Date</label>
+						<flexiblecode>%ARG%</flexiblecode>
+						<fullText>false</fullText>
+					</searchField>
+				</searchFieldRow>
+			</searchFields>
+			<searchResultItems>
+				<searchResultItem>
+					<name>table</name>
+					<label>Table</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>date</name>
+					<label>Date</label>
+				</searchResultItem>
+				<searchResultItem>
+					<name>count</name>
+					<label>Count</label>
+				</searchResultItem>
+			</searchResultItems>
+			<nestedSearches>
+				<nestedSearch>
+					<name>Extraction Details</name>
+					<label>Extraction Details</label>
+					<description>Extraction Details</description>
+					<configurationId>dummy</configurationId>
+					<transformationConfiguration>dataExtractModule
+					</transformationConfiguration>
+				</nestedSearch>
+			</nestedSearches>
+		</searchConfiguration>
+	</searchConfigurations>
+
+	<operationConfigurations>
+		<operationConfiguration id="add-hold">
+			<xqueries>
+				<xquery>add-hold.xml</xquery>
+			</xqueries>
+			<buttonLabel>Hold</buttonLabel>
+			<dialogTitle>Add hold to $count item(s)</dialogTitle>
+			<xformName>AddHoldsForm</xformName>
+			<operationFields>
+				<operationField>
+					<name>name</name>
+					<label>Name</label>
+				</operationField>
+				<operationField>
+					<name>description</name>
+					<label>Description</label>
+				</operationField>
+				<operationField>
+					<name>date</name>
+					<label>Date</label>
+					<type>date</type>
+					<required>true</required>
+				</operationField>
+			</operationFields>
+		</operationConfiguration>
+		<operationConfiguration id="set-retention">
+			<xqueries>
+				<xquery>set-retention.xml</xquery>
+			</xqueries>
+			<buttonLabel>Retention</buttonLabel>
+			<dialogTitle>Set retention on $count item(s)</dialogTitle>
+			<xformName>SetRetentionForm</xformName>
+			<operationFields>
+				<operationField>
+					<name>date</name>
+					<label>Date</label>
+					<type>date</type>
+					<required>true</required>
+				</operationField>
+				<operationField>
+					<name>XQuery</name>
+					<label>XQUERYNAME</label>
+				</operationField>
+			</operationFields>
+		</operationConfiguration>
+		<operationConfiguration id="remove-hold">
+			<xqueries>
+				<xquery>remove-hold.xml</xquery>
+			</xqueries>
+			<buttonLabel>Remove Holds</buttonLabel>
+			<dialogTitle>Remove holds</dialogTitle>
+			<message>Are you sure you want to remove the selected $count hold(s)?</message>
+		</operationConfiguration>
+	</operationConfigurations>
+</content>

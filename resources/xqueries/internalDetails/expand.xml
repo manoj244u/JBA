@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+  <expression><![CDATA[
+        
+        declare variable $companyCode external;
+        declare variable $job external;
+     
+         	
+         	
+       let $elem := doc('/DATA/JBA/Collection/SSP55')/SSP55/SSP55-ROW[CONO55=$companyCode][JOBN55=$job]
+		
+		return
+		
+	     <results>
+	{
+		
+		for $elem2 in doc('/DATA/JBA/Collection/SSP11')/SSP11/SSP11-ROW[CONO11=$elem/CONO55][XTYP11='JL'][RECT11='LN' or 'HD']
+		
+	
+		
+		return
+			<result 
+			
+						
+						companyCode = '{$elem/CONO55}'
+						job ='{$elem/JOBN55}'
+						text='{$elem2/TLIN11}'
+						title= 'InternalDetails'
+		                type = 'internalDetails'
+			/>
+	}
+        	</results>  
+    ]]></expression>
+</xquery>

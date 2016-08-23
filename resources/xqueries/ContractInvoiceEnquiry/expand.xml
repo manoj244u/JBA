@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds"><expression><![CDATA[
+        import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy'; 
+                import module namespace dynamicQueryModule 	= 'dynamicQueryModule' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/dynamicQueryModule.xqy';
+        
+    	 declare variable $Invoice external;
+         declare variable $Date external;
+         declare variable $Currency external;
+    
+		for $elem in doc('/DATA/JBA/Collection/SSP45')/SSP45/SSP45-ROW[INVN45=$Invoice][DTIN45=$Date][CURN45=$Currency][RECT45='IN' or 'CR']
+   		
+   			return
+			<results> 
+			{
+			
+				let $elem1:= doc('/DATA/JBA/Collection/SSP46')/SSP46/SSP46-ROW[INVN46=$Invoice]
+				return
+	
+				 <result 
+				 
+				 	ServiceContractInvoiceNumber='{$elem1/INVN46}'
+					ContractNumber='{$elem1/CNNO46}'
+				    CurrencyCode  ='{$elem/CURN45}'				    
+                    ContractType ='{$elem1/CNTY46}'
+                    ContractStartDate= '{utility:dateFormatter($elem1/CNDT46)}'
+                    
+                    InvoiceValue ='{$elem/INVA45}'
+                    InvoiceVatValue ='{$elem/INVV45}'               
+                    InvoiceTotal  ='{$elem/INVG45}'
+                  
+                     ModelDescription  ='{$elem1/INNO46}'
+                     SerialNumber ='{$elem1/INTY46}'
+                     Inst_Quantity  ='{$elem1/IQTY46}'
+                     TotalValue  ='{$elem1/(LVAL46 + LVAT46)}'
+                    
+                 
+                    
+                                                        
+                    title='JobcontractDetails'
+		            type='JobcontractDetails' 
+					 />				
+            } 
+			</results>
+        
+    ]]></expression></xquery>

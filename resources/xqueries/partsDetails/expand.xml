@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+  <expression><![CDATA[
+        
+          declare variable $companyCode external;
+          declare variable $modelNumber external;
+          declare variable $serialNumber external;
+          declare variable $job external;
+         	         	
+        let $elem := doc('/DATA/JBA/Collection/SSP55')/SSP55/SSP55-ROW[CONO55=$companyCode][JOBN55=$job][INTY55=$serialNumber][INNO55=$modelNumber]
+				return
+			     <results>
+	{
+        let  $elem1 :=   doc('/DATA/JBA/Collection/SSP54')/SSP54/SSP54-ROW[CONO54 =$companyCode][JOBN54=$job]
+        let  $elem2 :=  doc('/DATA/JBA/Collection/SSP72')/SSP72/SSP72-ROW[CONO72=$companyCode][JOBN72=$elem/JOBN55][SINT72=$elem/SINT55][INTY72=$elem/INTY55]
+        let  $elem3 :=  doc('/DATA/JBA/Collection/SSP73')/SSP73/SSP73-ROW[CONO73=$companyCode][JOBN73=$elem/JOBN55][SINT73=$elem/SINT55][INTY73=$elem/INTY55][PART73]
+        let  $elem4 := doc('/DATA/JBA/Collection/INP35')/INP35/INP35-ROW[CONO35=$companyCode][PNUM35=$elem3/PART73][PDES35]
+        let  $elem5 := doc('/DATA/JBA/Collection/SSP63')/SSP63/SSP63-ROW[CONO63=$companyCode][JOBT63=$job]
+        let  $elem6 := doc('/DATA/JBA/Collection/SSP77')/SSP77/SSP77-ROW[CONO77=$companyCode][JOBN77=$job][SINT77=$elem/SINT55][INTY77=$elem/INTY55]
+return
+<result  
+                            companyCode='{$elem1/CONO54}'
+							job  ='{$elem1/JOBN54}'
+							modelNumber ='{$elem/INNO55}'
+							serialNumber ='{$elem/INTY55}'
+							contractNumber='{$elem/CNNO55}'
+							contractType='{$elem/CNTY55}'
+							visitdate='{utility:dateFormatter($elem2/VSDT72)}'
+                            part='{$elem3/PART73}'
+                            partDescription  = '{$elem4/PDES35}'
+							jobcategory='{$elem2/JOBT73}'
+                            jobcategoryDesc ='{$elem5/WCTD63}' 
+                            quantityUsed = '{$elem3/UQTY73}'						
+							chg='{$elem3/PYPC73}'
+							engineerNumber='{$elem2/ENUM72}'
+							hours   ='{$elem2/SITM72}'
+							supplier = '{$elem6/SUPN77}'
+                             reportNumber='{$elem3/REPN73}'
+                            reason = '{$elem6/RESN77}'
+
+                               title='PartsRemoved and UsedDetails'
+                            	type='partsDetails'
+
+/> 
+		
+	
+		
+		
+	}
+        	</results>  
+    ]]></expression>
+</xquery>

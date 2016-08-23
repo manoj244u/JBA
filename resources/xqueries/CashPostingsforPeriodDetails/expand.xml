@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+<expression><![CDATA[
+        import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy'; 
+                import module namespace dynamicQueryModule 	= 'dynamicQueryModule' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/dynamicQueryModule.xqy';
+        
+         declare variable $Company external;
+         declare variable $Period external;
+         declare variable $BankAccount external;
+        declare variable $CashBookReference external;
+   
+		 	 let $elem := doc('/DATA/JBA/Collection/CSP12')/CSP12/CSP12-ROW[CONO12=$Company][PERD12=$Period][BANK12=$BankAccount]
+		     let $elem1 := doc('/DATA/JBA/Collection/CSP11')/CSP11/CSP11-ROW[CONO11=$elem/CONO12][BANK11=$elem/BANK12]	 
+	 	     return   	
+		
+		
+			<results> 
+			{
+			
+				for $elem2 in doc('/DATA/JBA/Collection/CSP20')/CSP20/CSP20-ROW[CONO20=$elem/CONO12][BANK20=$elem/BANK12][PERD20=$elem/PERD12][CBRF20=$CashBookReference] 
+				return
+	
+				 <result 
+				 
+				 
+				     					
+		                                Company = '{$elem/CONO12 }'
+		                                BankAccount = '{$elem/BANK12 }'
+		                                Period = '{$elem/PERD12}'
+		                                AccountDescription = '{$elem1/BDSC11 }'
+					                    ClosingBalanceinBankCurrency = '{$elem/(PYTM12 + RCTM12 + CGTM12 + BLOP12)}'
+					                    Suspended ='{$elem/(SPTM12 + SRTM12) }'
+					                 
+					                    Source = '{$elem2/SRCE20}'
+					                    MasterItemType = '{$elem2/ETYP20}' 
+					                    CashBookReference  = '{$elem2/CBRF20}'
+					                    BanksReference = '{$elem2/BREF20}'
+					                    Description = '{$elem2/DESC20}'
+					                    BaseCurrencyValue = '{$elem2/VLCN20}'
+					                    CurrencyValue = '{$elem2/CURV20}'
+					                    CurrencyCode = '{$elem2/CURN20}'
+					                    BankAccountCurrencyCode = '{$elem2/BCRN20}'
+					             			                
+					                  
+					                    title='Cash Postings for Period Details'
+							            type='CashPostingsforPeriodDetails'
+                 
+					                     
+					 />				
+            } 
+			</results>
+        
+        
+    ]]></expression></xquery>

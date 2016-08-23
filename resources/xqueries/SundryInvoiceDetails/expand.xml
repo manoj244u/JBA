@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+<expression><![CDATA[
+      import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy'; 
+                import module namespace dynamicQueryModule 	= 'dynamicQueryModule' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/dynamicQueryModule.xqy';
+        
+         declare variable $Invoice external;
+         declare variable $Date external;
+         declare variable $Currency external;
+            declare variable $CONO external;
+        
+   
+		 		for $elem in doc('/DATA/JBA/Collection/SSP45')/SSP45/SSP45-ROW[INVN45=$Invoice][DTIN45=$Date][CURN45=$Currency][RECT45='IN' or 'CR']
+   	return	 	        	
+		
+		
+			<results> 
+			{
+			
+				let $elem1:= doc('/DATA/JBA/Collection/SSP46')/SSP46/SSP46-ROW[INVN46=$Invoice][CONO46=$CONO]
+				let $elem2:=doc('/DATA/JBA/Collection/SSP11')/SSP11/SSP11-ROW[CONO11=$CONO][RECT11='IN' or 'CR'][XTYP11='IC'][USGE11='']
+				return
+	
+				 <result 
+				 
+				    InvoiceNumber='{$elem/INVN45}'					
+				    CurrencyCode  ='{$elem/CURN45}'
+				    InvoiceDate='{utility:dateFormatter($elem/DTIN45)}'	
+				    Account ='{$elem/ACNO45}'
+                    Location='{$elem/LOCN45}'
+                    CustomerOrderNumber='{$elem/ORDN45}'
+                    Number='{$elem1/REPL46}'
+					Description='{$elem2/TLIN11}'
+                    VatCode='{$elem1/VATC46}' 
+                    LineValue='{$elem1/LVAL46}' 
+                   typeOfJob='{concat($elem/INVT45,$elem/RECT45)}'
+
+                    SundryType ='{$elem/INVT45}'  
+                     SundryType1 ='{$elem/RECT45}'
+
+        			  title='SundryInvoiceDetails'
+					  type='SundryInvoiceDetails' 
+                 
+					                     
+					 />				
+            } 
+			</results>
+        
+        
+    ]]></expression></xquery>

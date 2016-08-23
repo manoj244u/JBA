@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+<expression><![CDATA[
+        import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy'; 
+                import module namespace dynamicQueryModule 	= 'dynamicQueryModule' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/dynamicQueryModule.xqy';
+        
+         declare variable $Invoice external;
+         declare variable $Date external;
+         declare variable $Currency external;
+            declare variable $CONO external;
+        
+   
+		 		for $elem in doc('/DATA/JBA/Collection/SSP45')/SSP45/SSP45-ROW[INVN45=$Invoice][DTIN45=$Date][CURN45=$Currency][RECT45='IN' or 'CR']
+   	return	 	        	
+		
+		
+			<results> 
+			{
+			
+				let $elem1:= doc('/DATA/JBA/Collection/SSP46')/SSP46/SSP46-ROW[INVN46=$Invoice]
+				let $elem2:=doc('/DATA/JBA/Collection/SSP11')/SSP11/SSP11-ROW[CONO11=$CONO]
+				return
+	
+				 <result 
+				 
+				 
+				    ServiceContractInvoiceNumber='{$elem1/INVN46}'
+				    CurrencyCode  ='{$elem1/CURN46}'
+				    ContractNumber='{$elem1/CNNO46}'
+				    ContractType='{$elem1/CNTY46}'
+				    ContractStartDate='{$elem1/CNDT46}'
+				    InvoiceValue='{$elem1/CNTY46}'
+				    InvoiceVatValue='{$elem1/CNTY46}'
+				    InvoiceTotal='{$elem1/CNTY46}'
+				    ModelDescription ='{$elem1/INNO46}'
+				    TYPE='{$elem/INVT45}'
+				    JobNumber='{$elem/JOBN45}'	
+                    SerialNumber='{$elem1/INTY46}'
+                    Inst_Quantity ='{$elem1/IQTY46}'
+                    TotalValue ='{$elem1/(LVAL46 + LVAT46)}'
+                    typeOfJob='{concat($elem/INVT45,$elem/RECT45)}'
+				 	InvoiceNumber='{$elem/INVN45}'	
+				    InvoiceDate='{utility:dateFormatter($elem/DTIN45)}'			    				    
+                    Account ='{$elem/ACNO45}'
+                    Location='{$elem/LOCN45}'
+                    CustomerOrderNumber='{$elem/ORDN45}'
+
+                    JobCategory ='{$elem1/JOBT46}'
+                    
+                    DetailLine ='{$elem1/AFLT46}'
+
+                    SundryType ='{$elem/INVT45}'  
+                     SundryType1 ='{$elem/RECT45}'
+
+
+
+                    
+                  
+          title='jobcontractDetails'
+					type='jobcontractDetails' 
+                 
+					                     
+					 />				
+            } 
+			</results>
+        
+        
+    ]]></expression></xquery>

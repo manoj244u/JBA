@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+  <expression><![CDATA[
+       import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy'; 
+       
+        declare variable $accountNumber  external;
+       declare variable $location  external;
+      declare variable $incDate  external;
+         	
+         	
+          	
+        
+      let  $elem1 :=  doc('/DATA/JBA/Collection/SSP38')/SSP38/SSP38-ROW[ACNO38=$accountNumber][LOCN38=$location][CADT38=$incDate]
+      let $elem := doc('/DATA/JBA/Collection/SSP35')/SSP35/SSP35-ROW[CNDT35=$elem1/CNDT38][CNNO35=$elem1/CNNO38]
+      let  $elem3 :=  doc('/DATA/JBA/Collection/SSP36')/SSP36/SSP36-ROW[CONO36=$elem1/CONO38][CNNO36=$elem1/CNNO38][CNTY36=$elem1/CNTY38][CNDT36=$elem1/CNDT38][INNO36=$elem1/INNO38][INTY36=$elem1/INTY38]
+	     let  $elem2 :=  doc('/DATA/JBA/Collection/SSP12')/SSP12/SSP12-ROW[CONO12=$elem1/CONO38][PRMT12 = 'CHST'][ PSAR12=$elem1/RSTA38]
+		let $results :=
+            <results> {
+                <result 
+	
+						                    
+								company ='{$elem/CONO35}'
+								branch='{$elem/BRSV35}'
+								accountNumber='{$elem/ACNO35}'
+								accountLocation='{$elem/LOCN35}'
+								contractNumber='{$elem/CNNO35}'
+								contractType='{$elem/CNTY35}'
+								contractstartDate='{utility:dateFormatter($elem/CNDT35)}'
+							   installationAddress='{$elem1/ACNO38}'
+								location='{$elem1/LOCN38}'
+								model='{$elem1/INNO38}'
+								serial='{$elem1/INTY38}'
+								status='{$elem2/DESC12}'
+								incDate='{utility:dateFormatter($elem1/CADT38)}'
+								removaldate='{utility:dateFormatter($elem1/RMDT38)}'
+								rhours='{$elem1/RSPH38}'
+								visit='{if($elem2/CONO36 !='') then '1' else '0'}'
+								
+                                  title='ContractEquipment'
+					              type='contractEquipment'
+	/>
+	 } </results>
+        return $results
+						
+    ]]></expression>
+</xquery>

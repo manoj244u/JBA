@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<xhtml:html xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<xhtml:head>
+		<xforms:model id="searchTextModel">
+			<xforms:instance>
+				<data>
+					<job/>
+                    <model/>
+                    <serialNumber/>
+                    <generatedserialNumber/>
+				</data>
+			</xforms:instance>
+			 <xforms:bind id="jobBind" nodeset="job"/>
+       <xforms:bind id="modelBind" nodeset="model"/>
+       <xforms:bind id="serialNumberBind" nodeset="serialNumber"/>
+       <xforms:bind id="generatedserialNumberBind" nodeset="generatedserialNumber"/>
+      <xforms:submission replace="none" id="searchTextModelSubmission" action="" method="post"/>
+      <xforms:reset ev:event="DOMActivate"/>
+		</xforms:model>
+	</xhtml:head>
+	<xhtml:body>
+		 <xforms:group model="searchTextModel" id="searchText">
+      <table xmlns="http://www.w3.org/1999/xhtml">
+        <tr>
+          <td rowspan="1" colspan="1">Job</td>
+          <td>:</td>
+          <td rowspan="1" colspan="1">
+            <xforms:input id="job" bind="jobBind">
+              <xforms:label/>
+            </xforms:input>
+          </td>
+          <td rowspan="1" colspan="1">Model</td>
+          <td>:</td>
+          <td rowspan="1" colspan="1">
+            <xforms:input id="model" bind="modelBind">
+              <xforms:label/>
+            </xforms:input>
+          </td>
+          <td rowspan="1" colspan="1">SerialNumber</td>
+          <td>:</td>
+          <td rowspan="1" colspan="1">
+            <xforms:input id="serialNumber" bind="serialNumberBind">
+              <xforms:label/>
+            </xforms:input>
+          </td>
+          <td rowspan="1" colspan="1">GeneratedSerialNumber</td>
+          <td>:</td>
+          <td rowspan="1" colspan="1">
+            <xforms:input id="generatedserialNumber" bind="generatedserialNumberBind">
+              <xforms:label/>
+            </xforms:input>
+          </td>
+          </tr>
+          
+      </table>
+			  <table xmlns="http://www.w3.org/1999/xhtml">
+        <tr>
+          <td rowspan="1" colspan="1">
+            <td rowspan="1" colspan="1">
+             <xforms:trigger id="input1-0">
+				<xforms:label>Submit</xforms:label>
+				<xforms:send submission="searchTextModelSubmission"/>
+			</xforms:trigger>
+            </td>
+            <td rowspan="1" colspan="1">
+              <xforms:trigger>
+                <xforms:label>Clear</xforms:label>
+                <xforms:reset ev:event="DOMActivate"/>
+              </xforms:trigger>
+            </td>
+          </td>
+        </tr>
+      </table>
+		</xforms:group>
+	</xhtml:body>
+</xhtml:html>

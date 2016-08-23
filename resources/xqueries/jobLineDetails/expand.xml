@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+  <expression><![CDATA[
+    
+    
+        import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy';
+        
+        declare variable $serialNumber external;
+        declare variable $companyCode external;
+        declare variable $job external;
+       
+       
+		 let $elem2 := doc('/DATA/JBA/Collection/SSP55/')/SSP55/SSP55-ROW[CONO55=$companyCode][JOBN55 = $job]
+	
+        	
+        	
+        	 let $results :=
+            <results> {
+                <result  
+				            companyCode = '{$elem2/CONO55}'
+				            account='{$elem2/ACNO55}'
+                            job = '{$elem2/JOBN55}'
+                            jobCat = '{$elem2/JOBT55}'
+                            modelNumber= '{$elem2/INNO55}'
+                            modelDescription= ''
+                            serialNumber= '{$elem2/INTY55}'
+                            engineer= '{$elem2/ENUM55}'
+                            location='{$elem2/LOCN55}'
+                            fault= '{$elem2/FLTC55}'
+                            faultDescription= '{$elem2/FLT155}'
+                            date='{utility:dateFormatter($elem2/DTCT55)}'
+                            time = '{utility:genTime($elem2/TMCT55)}'
+                            type='jobLineDetails'
+							title='Job Selection Details'
+			/>
+            } </results>
+        return $results
+         
+    ]]></expression>
+</xquery>

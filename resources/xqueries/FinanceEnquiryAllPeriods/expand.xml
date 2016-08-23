@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+    <expression><![CDATA[
+        declare variable $company external;
+        declare variable $ledger external;
+		declare variable $account external;
+		declare variable $npdr external;
+		declare variable $npcr external;
+        
+        let $x := doc('/DATA/JBA/Collection/F/FLP004')/FLP004/FLP004-ROW[CONO = $company][LEDNO = $ledger][PSTPER=$account][NPDR04=$npdr][NPCR04=$npcr]
+		let $results :=
+            <results> {
+                <result 
+	company='{$x/CONO}'
+	ledger='{$x/LEDNO}'
+	account='{$x/PSTPER}'		
+	period='{$x/PSTPER}'
+	netpostedforperiod = '{$x/NPDR04+$x/NPCR04}'
+	calenderyeartodate='{$x/CYDR04+$x/CYCR04 }'
+	fiscalyeartodate='{$x/FYDR04+$x/FYCR04}'
+	type='FinanceEnquiryAllPeriods'
+	title='FinanceEnquiryAllPeriods'
+	/>
+	 } </results>
+        return $results
+	    
+    ]]></expression>
+</xquery>

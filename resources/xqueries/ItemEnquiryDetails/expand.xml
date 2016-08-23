@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+<expression><![CDATA[
+        import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy'; 
+                import module namespace dynamicQueryModule 	= 'dynamicQueryModule' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/dynamicQueryModule.xqy';
+        
+         declare variable $Company external;
+         declare variable $Period external;
+         declare variable $BankAccount external;
+        declare variable $CashBookReference external;
+   
+		 	 let $elem := doc('/DATA/JBA/Collection/CSP12')/CSP12/CSP12-ROW[CONO12=$Company][PERD12=$Period][BANK12=$BankAccount]
+		     let $elem2 := doc('/DATA/JBA/Collection/CSP11')/CSP11/CSP11-ROW[CONO11=$elem/CONO12][BANK11=$elem/BANK12]	 
+	 	     return   	
+		
+		
+			<results> 
+			{
+			
+				for $elem1 in doc('/DATA/JBA/Collection/CSP20')/CSP20/CSP20-ROW[CONO20=$elem/CONO12][BANK20=$elem/BANK12][PERD20=$elem/PERD12][CBRF20=$CashBookReference] 
+				return
+	
+				 <result 
+				 
+				 
+				     					
+		                                    Company  = '{$elem/CONO12 }'
+		                               	    CashBookReference = '{$elem1/CBRF20}'
+		                                	BankAccount = '{$elem/BANK12 }'
+		                               	    AccountDescription = '{$elem2/BDSC11 }'
+		                                    MasterItemType = '{$elem1/ETYP20}'
+		                                    BanksReference = '{$elem1/BREF20}'
+		                                    Period = '{$elem/PERD12}'
+		                                    ItemValue ='{$elem1/VLCN20}'
+		                                    BankValue ='{$elem1/VLCN20}'
+		                                    LedgerValue='{$elem1/VLCN20}'
+		                                    CurrencyCode = '{$elem1/CURN20}'
+					                  		BankAccountCurrencyCode = '{$elem1/BCRN20}'
+		                                
+		                                
+					                    				                  
+					                    title='ItemEnquiryDetails'
+							            type='ItemEnquiryDetails' 
+                 
+					                     
+					 />				
+            } 
+			</results>
+        
+        
+    ]]></expression></xquery>

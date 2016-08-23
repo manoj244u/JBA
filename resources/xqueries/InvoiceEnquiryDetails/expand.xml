@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+    <expression><![CDATA[
+     import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy'; 
+                import module namespace dynamicQueryModule 	= 'dynamicQueryModule' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/dynamicQueryModule.xqy';
+        
+           declare variable $Invoice_Credit external;
+           declare variable $CONO external;
+            
+        
+		for  $elem in doc('/DATA/JBA/Collection/SSP45')/SSP45/SSP45-ROW[INVN45=$Invoice_Credit][CONO45=$CONO]
+			
+        let $results :=
+            <results> 
+			{
+			let $elem1 := doc('/DATA/JBA/Collection/SLP05')/SLP05/SLP05-ROW[CONO05=$elem/CONO45][CUSN05=$elem/ACNO45][DSEQ05=$elem/LOCN45]
+			return
+			 <result 
+			 							
+									    Invoice_Credit='{$elem/INVN45 }'
+									    Date='{utility:dateFormatter($elem/DTIN45)}'
+					                    InvoiceValue='{$elem/INVG45  }'
+					                    Account='{$elem/ACNO45  }'
+					                    Location ='{$elem/LOCN45}'
+					                    Currency='{$elem/CURN45}' 
+					                    InstallationName='{$elem1/CNAM05}' 		
+					                    		                   		                    
+					                    title='InvoiceEnquiryDetails'
+							            type='InvoiceEnquiryDetails' 
+			  />
+				
+            } 
+			</results>
+        return $results
+    ]]></expression>
+</xquery>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<xhtml:html xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<xhtml:head>
+		<xforms:model id="searchLabourModel">
+			<xforms:instance>
+				<data>
+					<model/>
+					<serialNumber/>
+					<account/>
+					<company/>
+					<location/>
+					<generatedserialNumber/>
+					<contractNumber/>
+					<contractType/>
+					<jobNumber/>
+					<branch/>
+				</data>
+			</xforms:instance>
+			<xforms:bind id = "modelBind" nodeset = "model"/>
+			<xforms:bind id = "serialNumberBind" nodeset = "serialNumber" />
+			<xforms:bind id = "accountBind" nodeset = "account" />
+			<xforms:bind id = "companyBind" nodeset = "company" />
+			<xforms:bind id = "locationBind" nodeset = "location" />
+			<xforms:bind id = "generatedserialNumberBind" nodeset = "generatedserialNumber" />
+			<xforms:bind id = "contractNumberBind" nodeset = "contractNumber" />
+			<xforms:bind id = "contractTypeBind" nodeset = "contractType" />
+			<xforms:bind id = "jobNumberBind" nodeset = "jobNumber" />
+			<xforms:bind id = "branchBind" nodeset = "branch" />
+			<xforms:submission replace = "none" id = "searchLabourModelSubmission" action = "" method = "post"/>
+			<xforms:reset ev:event="DOMActivate"/>
+		</xforms:model>
+	</xhtml:head>
+	<xhtml:body>
+		<xforms:group model="searchLabourModel" id="searchLabour">
+			<table xmlns="http://www.w3.org/1999/xhtml">
+				<tr>
+					<td rowspan="1" colspan="1">Model</td>
+					<td>:</td>
+					<td rowspan="1" colspan="1">
+						<xforms:input id="model" bind="modelBind">
+							<xforms:label/>
+						</xforms:input>
+					</td>
+					<td rowspan="1" colspan="1">SerialNumber</td>
+					<td>:</td>
+					<td rowspan="1" colspan="1">
+						<xforms:input id="serialNumber" bind="serialNumberBind">
+							<xforms:label/>
+						</xforms:input>
+					</td>
+					<td rowspan="1" colspan="1">Account</td>
+					<td>:</td>
+					<td rowspan="1" colspan="1">
+						<xforms:input id="account" bind="accountBind">
+							<xforms:label/>
+						</xforms:input>
+					</td>
+					<td rowspan="1" colspan="1">Company</td>
+					<td>:</td>
+					<td rowspan="1" colspan="1">
+						<xforms:input id="company" bind="companyBind">
+							<xforms:label/>
+						</xforms:input>
+					</td>
+					<td rowspan="1" colspan="1">Location</td>
+					<td>:</td>
+					<td rowspan="1" colspan="1">
+						<xforms:input id="location" bind="locationBind">
+							<xforms:label/>
+						</xforms:input>
+					</td>
+					</tr>
+					<tr>
+					<td rowspan="1" colspan="1">GeneratedSerialNumber</td>
+					<td>:</td>
+					<td rowspan="1" colspan="1">
+						<xforms:input id="generatedserialNumber" bind="generatedserialNumberBind">
+							<xforms:label/>
+						</xforms:input>
+					</td>
+					<td rowspan="1" colspan="1">ContractNumber</td>
+					<td>:</td>
+					<td rowspan="1" colspan="1">
+						<xforms:input id="contractNumber" bind="contractNumberBind">
+							<xforms:label/>
+						</xforms:input>
+					</td>
+					<td rowspan="1" colspan="1">ContractType</td>
+					<td>:</td>
+					<td rowspan="1" colspan="1">
+						<xforms:input id="contractType" bind="contractTypeBind">
+							<xforms:label/>
+						</xforms:input>
+					</td>
+					<td rowspan="1" colspan="1">JobNumber</td>
+					<td>:</td>
+					<td rowspan="1" colspan="1">
+						<xforms:input id="jobNumber" bind="jobNumberBind">
+							<xforms:label/>
+						</xforms:input>
+					</td>
+					<td rowspan="1" colspan="1">Branch</td>
+					<td>:</td>
+					<td rowspan="1" colspan="1">
+						<xforms:input id="Branch" bind="branchBind">
+							<xforms:label/>
+						</xforms:input>
+					</td>
+				</tr>
+			</table>
+			 <table xmlns="http://www.w3.org/1999/xhtml">
+           <tr>
+          <td rowspan="1" colspan="1">
+            <td rowspan="1" colspan="1">
+             <xforms:trigger id="input1-0">
+				<xforms:label>Submit</xforms:label>
+				<xforms:send submission="searchLabourModelSubmission"/>
+			</xforms:trigger>
+            </td>
+            <td rowspan="1" colspan="1">
+              <xforms:trigger>
+                <xforms:label>Clear</xforms:label>
+                <xforms:reset ev:event="DOMActivate"/>
+              </xforms:trigger>
+            </td>
+          </td>
+        </tr>
+      </table>
+		</xforms:group>
+	</xhtml:body>
+</xhtml:html>

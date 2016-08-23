@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+  <expression><![CDATA[
+       import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy'; 
+       
+        declare variable $company external;
+        declare variable $contractStartDate external;
+        declare variable $contract external;
+         	
+         	
+          	
+       let $elem := doc('/DATA/JBA/Collection/SSP35')/SSP35/SSP35-ROW[CONO35=$company][CNDT35=$contractStartDate][CNNO35=$contract]
+		
+	 return
+	<results>
+	{
+		let $elem1 := doc('/DATA/JBA/Collection/SSP64')/SSP64/SSP64-ROW[CONO64=$elem/CONO35][CNTY64=$elem/CNTY35]
+                     let $elem2 := doc('/DATA/JBA/Collection/SSPA8')/SSPA8/SSPA8-ROW[CONOA8=$elem/CONO35][BRSVA8=$elem/BRSV35][CNNOA8=$elem/CNNO35][CNTYA8 =$elem/CNTY35][CNDTA8=$elem/CNDT35][RECTA8 = '02']
+              	let $elem3 := doc('/DATA/JBA/Collection/SLP05')/SLP05/SLP05-ROW[CONO05=$elem/CONO35]
+           	let $elem4 := doc('/DATA/JBA/Collection/SSP12')/SSP12/SSP12-ROW[CONO12=$elem/CONO35][PRMT12 = 'CHST'][PSAR12=$elem/STAT35]
+              	let $elem5 := doc('/DATA/JBA/Collection/SSP39')/SSP39/SSP39-ROW[CONO39=$elem/CONO35][CNNO39=$elem/CNNO35][CNTY39=$elem/CNTY35][CNDT39=$elem/CNDT35]
+            	let $elem6 := doc('/DATA/JBA/Collection/INP15')/INP15/INP15-ROW[CONO15=$elem/CONO35][PRMT15='TN'][PSAR15=$elem/SLMN35]  
+		return
+			<result 
+				        Company = '{$elem/CONO35}'
+                                                Branch = '{$elem/BRSV35}'
+							AccountNumber= '{$elem/ACNO35}'
+							AccountLocation= '{$elem/LOCN35}'
+							AccountName= '{$elem/CNAM05}'
+							ContractNumber= '{$elem/CNNO35}'
+							AltContNo= '{$elem/ALCN35}'
+							Version= '{$elem/VRSN35}'
+							ContractType= '{$elem/CNTY35}'
+							ContractTypeDescription= '{$elem1/CNDS64}'
+							Status= '{$elem4/DESC12}'
+							ContractStartDate= '{utility:dateFormatter($elem/CNDT35)}'
+							ContractEndDate= '{utility:dateFormatter($elem/TRMD35)}'
+							invoiceStartDate= '{utility:dateFormatter($elem/DTIS35)}'
+							CalendarCode= '{$elem/CCAL35}'
+							TotalContactValue= '{$elem/TCVL35}'
+							Duration= '{$elem/TILD35}'
+							HeaderPrice= '{$elem5/FSVC39}'
+							MantleCode= '{$elem/MANT35}'
+							MantleDescription= '{$elem/DESC12}'
+							CustomerOrderRef= '{$elem/MEM135}'
+							OrderRefDate= '{utility:dateFormatter($elem/MED135)}'
+							CustomerContact= '{$elem/CNCT35}'
+							TelephoneNumber= '{$elem/PHON35}'
+							RenewContract= '{$elem/SPA135}'
+							Region= '{$elem/REGN35}'
+							RegionDescription= '{$elem/DESC12}'
+							NonpostingInvoices= '{$elem/FIFG35}'
+							EstimatesAllowed= '{$elem/ESTF35}'
+							Numberofestimates = '{$elem/ESTN35}'
+							Headerlevelpricing = '{$elem5/HDLP39}'
+							SalesmanCode= '{$elem/SLMN35}'
+							SalesmanName= '{$elem6/PRMD15}'
+							InvoiceSumm = '{$elem/INVF35}'
+							DirectDebit = '{$elem/DRDB35}'
+							HeaderCurrency = '{$elem/CURH35}'
+							InvoiceDestination = '{$elem/INAC35}'
+							InvoiceDestinationLoc= '{$elem/IVSQ35}'
+							ContractInvoiceBillToA= '{$elem2/CBANA8}'
+							ContractInvoiceBillToLoc= '{$elem2/CBADA8}'
+							JobInvoiceBilltoA= '{$elem2/JBANA8}'
+							JobInvoiceBilltoLoc= '{$elem2/JBADA8}'
+
+						title= 'MainContract'
+		                type = 'mainContract'
+			/>
+            } </results>
+    ]]></expression>
+</xquery>

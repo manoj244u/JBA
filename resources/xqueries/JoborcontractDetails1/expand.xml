@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+<expression><![CDATA[
+       import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy'; 
+                import module namespace dynamicQueryModule 	= 'dynamicQueryModule' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/dynamicQueryModule.xqy';
+        
+         declare variable $Invoice external;
+         declare variable $CONO external;
+   
+					for $elem in doc('/DATA/JBA/Collection/SSP45')/SSP45/SSP45-ROW[INVN45=$Invoice][CONO45=$CONO]
+	 	        		
+		return
+			<results> 
+			{	
+					let $elem1 := doc('/DATA/JBA/Collection/SLP05')/SLP05/SLP05-ROW[CONO05=$elem/CONO45][CUSN05=$elem/ACNO45][DSEQ05=$elem/LOCN45]
+					return	
+		
+				 <result 
+				 
+				 
+										Invoice='{$elem/INVN45 }'									   
+									    Date= '{utility:dateFormatter($elem/DTIN45)}'
+					                    InvoiceValue='{$elem/INVG45}'
+					                    Account='{$elem/ACNO45  }'
+					                    Location ='{$elem/LOCN45}'
+					                    Currency='{$elem/CURN45}' 					                  
+					                    ACName='{$elem1/CNAM05}'
+					                    ACAddressLine1='{$elem1/CAD105}'
+					                    ACAddressLine2='{$elem1/CAD205}'
+					                    ACAddressLine3='{$elem1/CAD305}'
+					                    ACAddressLine4='{$elem1/CAD405}'
+					                    ACAddressLine5='{$elem1/CAD505}'
+					                    PostCode='{$elem1/PCD105}'
+					                    
+					                    title='JoborcontractDetails1'
+							            type='JoborcontractDetails1' 
+					 />				
+            } 
+			</results>
+        
+    ]]></expression></xquery>

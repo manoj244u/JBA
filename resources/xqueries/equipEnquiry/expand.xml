@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+  <expression><![CDATA[
+    
+     import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy';  
+        
+         declare variable $companyCode external;
+         declare variable $job external;
+          declare variable $branch external;
+       
+	for $elem in fn:doc('/DATA/JBA/Collection/SSP55')/SSP55/SSP55-ROW[CONO55=$companyCode][JOBN55=$job][BRSV55=$branch]
+	
+        	return
+	<results>
+	{
+	            for $elem1 in  doc('/DATA/JBA/Collection/S7P76U/')/S7P76U/S7P76U-ROW[CONO76=$companyCode][JOBN76 = $job][BRSV76=$branch]
+            	let $elem2 := doc('/DATA/JBA/Collection/SSP54/')/SSP54/SSP54-ROW[CONO54=$companyCode][JOBN54 = $job][BRSV54=$branch]
+        	      return
+			<result   
+	                  companyCode = '{$elem1/CONO76}'
+                            branch = '{$elem1/BRSV76}'
+                            job = '{$elem1/JOBN76}'
+                            date= '{$elem1/TDAT76}'
+                            time= '{$elem1/TDAT76}'
+                            account= '{$elem2/CONO54}'
+                            location = '{$elem2/LOCN54}'
+                            serialNumber='{$elem1/INTY76}'
+                            calibrationDate= '{$elem1/CALD76}'
+                            description= '{$elem1/DESC76}'
+                            
+			/>
+}
+	</results>
+         
+         
+    ]]></expression>
+</xquery>

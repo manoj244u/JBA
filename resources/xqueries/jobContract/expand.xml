@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+  <expression><![CDATA[
+       import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy'; 
+       
+        declare variable $company external;
+        declare variable $contractStartDate external;
+        declare variable $contract external;
+         	
+         	
+          	
+       let $elem := doc('/DATA/JBA/Collection/SSP35')/SSP35/SSP35-ROW[CONO35=$company][CNDT35=$contractStartDate][CNNO35=$contract]
+		
+	 return
+	<results>
+	{
+		let $elem1 := doc('/DATA/JBA/Collection/SSP64')/SSP64/SSP64-ROW[CONO64=$elem/CONO35][CNTY64=$elem/CNTY35]
+		return
+			<result 
+				        accountNumber='{$elem/ACNO35}'
+						accountAddress='{$elem/LOCN35}'
+						contractNumber='{$elem/CNNO35}'
+						contractType='{$elem/CNTY35}'
+						descp='{$elem1/CNDS64}'
+						date='{utility:dateFormatter($elem/CNDT35)}'
+						title= 'JobContract'
+		                type = 'jobContract'
+			/>
+            } </results>
+      
+			
+						
+    ]]></expression>
+</xquery>

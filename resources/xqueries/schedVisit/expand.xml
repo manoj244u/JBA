@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<xquery xmlns="http://www.emc.com/documentum/xml/dds">
+  <expression><![CDATA[
+
+
+
+import module namespace utility = 'utility' at '/APPLICATIONS/JBA/resources/xqueries/commonModules/utility.xqy'; 
+       
+        declare variable $company external;   
+         declare variable $period external;
+        declare variable $numberofVisits external;
+          declare variable $jobCategory  external;
+            declare variable $serialNumber  external;
+
+       
+      
+     
+         	
+         	
+          	
+            let $elem :=  doc('/DATA/JBA/Collection/SSP36')/SSP36/SSP36-ROW[CONO36=$company][SCPD36=$period][VSNO36=$numberofVisits][JOBT36=$jobCategory][INTY36=$serialNumber]
+          
+          
+          
+		   let $results :=
+            <results> {
+                <result 
+	
+						                    
+								company ='{$elem/CONO36}'
+								branch='{$elem/BRSV36}'
+								contractNumber='{$elem/CNNO36}'
+								contractType='{$elem/CNTY36}'
+								contractStartDate='{$elem/CNDT36}'
+								model='{$elem/INNO36}'
+							    serial='{$elem/INTY36}'
+								generatedSerialNumber='{$elem/SINT36}'
+                         
+                                 title='Scheduled Visit'
+                                 type = 'shedVisit'
+	/>
+	 } </results>
+        return $results
+        
+         ]]></expression>
+</xquery>

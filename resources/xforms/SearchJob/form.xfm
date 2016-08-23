@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<xhtml:html xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<xhtml:head>
+		<xforms:model id="searchJobModel">
+			<xforms:instance>
+				<data>
+		<serialNumber/>
+          <model/>
+          <accountNumber/>
+          <contractNumber/>
+          <customerorderno/>
+          <jobNumber/>
+          <mservicetempjob/>
+				</data>
+			</xforms:instance>
+			<xforms:bind id="serialNumberBind" nodeset="serialNumber"/>
+       <xforms:bind id="modelBind" nodeset="model"/>
+       <xforms:bind id="accountNumberBind" nodeset="accountNumber"/>
+       <xforms:bind id="contractNumberBind" nodeset="contractNumber"/>
+       <xforms:bind id="customerordernoBind" nodeset="customerorderno"/>
+       <xforms:bind id="jobNumberBind" nodeset="jobNumber"/>
+       <xforms:bind id="mservicetempjobBind" nodeset="mservicetempjob"/>
+       <xforms:submission replace="none" id="searchJobModelSubmission" action="" method="post"/>
+			<xforms:reset ev:event="DOMActivate"/>
+		</xforms:model>
+	</xhtml:head>
+	<xhtml:body>
+		 <xforms:group model="searchJobModel" id="searchJob">
+      <table xmlns="http://www.w3.org/1999/xhtml">
+        <tr>
+          <td rowspan="1" colspan="1">SerialNumber</td>
+          <td>:</td>
+          <td rowspan="1" colspan="1">
+            <xforms:input id="serialNumber" bind="serialNumberBind">
+              <xforms:label/>
+            </xforms:input>
+          </td>
+          <td rowspan="1" colspan="1">Model</td>
+          <td>:</td>
+          <td rowspan="1" colspan="1">
+            <xforms:input id="model" bind="modelBind">
+              <xforms:label/>
+            </xforms:input>
+          </td>
+          <td rowspan="1" colspan="1">AccountNumber</td>
+          <td>:</td>
+          <td rowspan="1" colspan="1">
+            <xforms:input id="accountNumber" bind="accountNumberBind">
+              <xforms:label/>
+            </xforms:input>
+          </td>
+          <td rowspan="1" colspan="1">ContractNumber</td>
+          <td>:</td>
+          <td rowspan="1" colspan="1">
+            <xforms:input id="contractNumber" bind="contractNumberBind">
+              <xforms:label/>
+            </xforms:input>
+          </td>
+          </tr>
+          <tr>
+          <td rowspan="1" colspan="1">CustomerOrderNo</td>
+          <td>:</td>
+          <td rowspan="1" colspan="1">
+            <xforms:input id="customerorderno" bind="customerordernoBind">
+              <xforms:label/>
+            </xforms:input>
+          </td>
+        <td rowspan="1" colspan="1">JobNumber</td>
+          <td>:</td>
+          <td rowspan="1" colspan="1">
+            <xforms:input id="jobNumber" bind="jobNumberBind">
+              <xforms:label/>
+            </xforms:input>
+          </td>
+          <td rowspan="1" colspan="1">mServiceTempJob</td>
+          <td>:</td>
+          <td rowspan="1" colspan="1">
+            <xforms:input id="mservicetempjob" bind="mservicetempjobBind">
+              <xforms:label/>
+            </xforms:input>
+          </td>
+        
+        </tr>
+      </table>
+		<table xmlns="http://www.w3.org/1999/xhtml">
+        <tr>
+          <td rowspan="1" colspan="1">
+            <td rowspan="1" colspan="1">
+             <xforms:trigger id="input1-0">
+				<xforms:label>Submit</xforms:label>
+				<xforms:send submission="searchJobModelSubmission"/>
+			</xforms:trigger>
+            </td>
+            <td rowspan="1" colspan="1">
+              <xforms:trigger>
+                <xforms:label>Clear</xforms:label>
+                <xforms:reset ev:event="DOMActivate"/>
+              </xforms:trigger>
+            </td>
+          </td>
+        </tr>
+      </table>
+		</xforms:group>
+	</xhtml:body>
+</xhtml:html>
