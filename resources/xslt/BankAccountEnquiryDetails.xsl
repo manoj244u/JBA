@@ -36,8 +36,8 @@
                     <table width="100%" border="1">
                         <tr>
                        		<td><b>Company</b></td>
-                        	<td><b>Bank Account</b></td>
-                            <td><b>Bank Type</b></td>
+                        	<td><b>Bank_Account</b></td>
+                            <td><b>BankType</b></td>
                             <td><b>Account Description</b></td>
                         </tr>
                             
